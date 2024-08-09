@@ -6,10 +6,10 @@ module.exports = {
   ],
   theme: {
     screens: {
-      sm: '480px',
-      md: '760px',
-      lg: '1024px',
-      xl: '1440px',
+      sm: "480px",
+      md: "760px",
+      lg: "1024px",
+      xl: "1440px",
     },
     colors: {
       primary: "#3D8AFF",
@@ -24,6 +24,15 @@ module.exports = {
       pop: ["var(--font-poppins)", "sans-serif"],
     },
     extend: {
+      animation: {
+        move: "move 5s linear infinite",
+      },
+      keyframes: {
+        move: {
+          "0%": { transform: "translateX(-200px)" },
+          "100%": { transform: "translateX(200px)" },
+        },
+      },
     },
   },
   plugins: [],
