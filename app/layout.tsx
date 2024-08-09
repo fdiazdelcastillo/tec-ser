@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${montserrat.variable} ${poppins.variable} flex justify-center`}
+        className={`${montserrat.variable} ${poppins.variable} flex justify-center bg-[#000000]`}
       >
         {children}
       </body>
