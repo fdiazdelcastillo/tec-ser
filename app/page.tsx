@@ -4,7 +4,9 @@ import Header from "@/components/Header";
 
 export default function Home() {
   return (
-    <main className={`${styles.main} bg-background`}>
+    <main
+      className={`${styles.main} w-full bg-background max-w-screen-xl flex`}
+    >
       <Header />
     </main>
   );
