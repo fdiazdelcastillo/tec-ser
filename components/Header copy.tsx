@@ -11,24 +11,7 @@ type HeaderProps = {};
 
 const Header: React.FC<HeaderProps> = () => {
   const [activeSection, setActiveSection] = useState<string>("home");
-  const [menuOpen, setMenuOpen] = useState<boolean>(false);
-  const [isSticky, setIsSticky] = useState<boolean>(false); // New state for sticky header
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const homeSection = document.getElementById("home");
-      if (homeSection) {
-        const homeSectionHeight = homeSection.offsetHeight;
-        setIsSticky(window.scrollY > homeSectionHeight);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  const [menuOpen, setMenuOpen] = useState<boolean>(false); // Estado para controlar el menú
 
   useEffect(() => {
     const sections = document.querySelectorAll("section");
@@ -55,13 +38,7 @@ const Header: React.FC<HeaderProps> = () => {
   };
 
   return (
-    <header
-      className={`w-full flex justify-start items-center gap-4 py-9 px-4 md:px-8 ${
-        isSticky
-          ? "fixed top-0 left-[240px] right-[240px] bg-[#1A1C1E] z-50"
-          : ""
-      } transition-all`}
-    >
+    <header className="w-full flex justify-normal items-center gap-4 py-9 px-4 md:px-8">
       <div className="z-50">
         <Image src={Logo} alt="omnitrek logo" width={180} />
       </div>
@@ -89,7 +66,7 @@ const Header: React.FC<HeaderProps> = () => {
                 ? "text-primary"
                 : "text-text"
             }`}
-            onClick={() => setMenuOpen(false)}
+            onClick={() => setMenuOpen(false)} // Cierra el menú al hacer clic en un enlace
           >
             {navbarLink.name}
           </Link>
