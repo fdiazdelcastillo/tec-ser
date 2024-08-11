@@ -28,7 +28,7 @@ type CardCompProps = {
 let IconComponent: any;
 
 export function Card(props: CardCompProps) {
-  IconComponent = props.iconName;
+  IconComponent = iconMap[props.iconName];
   return (
     <CardConst className="font-pop text-text">
       <CardSkeletonContainer>
