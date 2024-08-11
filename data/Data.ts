@@ -1,8 +1,3 @@
-import { GoCopilot, GoGlobe } from "react-icons/go";
-import { GiArtificialIntelligence } from "react-icons/gi";
-import { GrCatalog } from "react-icons/gr";
-import { IconType } from "react-icons";
-
 type NavbarData = { name: String; link: string }[];
 
 export const navbarData: NavbarData = [
@@ -14,11 +9,11 @@ export const navbarData: NavbarData = [
   { name: "Contact Us", link: "#contactUs" },
 ];
 
-type IconName = "copilot" | "globe" | "ai" | "catalog";
+type IconName = "globe" | "ai" | "catalog" | "scw" | "scm" | "scmw";
 
 type ServicesData = {
   name: string;
-  iconName: IconName;
+  iconName: IconName[];
   description: string;
   elements: string[];
   monthPrice: number;
@@ -28,7 +23,7 @@ type ServicesData = {
 export const servicesData: ServicesData = [
   {
     name: "Sitio Web",
-    iconName: "globe",
+    iconName: ["ai", "globe", "catalog"],
     description:
       "Ideal para startups y pequeños negocios que buscan establecer presencia online",
     elements: [
@@ -42,7 +37,7 @@ export const servicesData: ServicesData = [
   },
   {
     name: "Catálogo Web",
-    iconName: "globe",
+    iconName: ["globe", "catalog", "scw"],
     description:
       "Ideal para negocios en crecimiento que quieren mostrar sus productos o servicios",
     elements: [
@@ -56,7 +51,7 @@ export const servicesData: ServicesData = [
   },
   {
     name: "Tienda Web",
-    iconName: "globe",
+    iconName: ["catalog", "scw", "scm"],
     description:
       "Ideal para empresas listas para vender online y gestionar pedidos",
     elements: [
@@ -70,7 +65,7 @@ export const servicesData: ServicesData = [
   },
   {
     name: "Tienda Móvil",
-    iconName: "globe",
+    iconName: ["scw", "scm", "scmw"],
     description:
       "Ideal para negocios enfocados en ventas a través de dispositivos móviles",
     elements: [
@@ -84,7 +79,7 @@ export const servicesData: ServicesData = [
   },
   {
     name: "Tienda Móvil & Web",
-    iconName: "globe",
+    iconName: ["scm", "scmw", "ai"],
     description:
       "Ideal para empresas que buscan una solución omnicanal completa",
     elements: [
@@ -97,7 +92,7 @@ export const servicesData: ServicesData = [
   },
   {
     name: "IA Chat",
-    iconName: "globe",
+    iconName: ["scmw", "ai", "globe"],
     description:
       "Ideal para cualquier negocio que quiera mejorar la atención al cliente 24/7",
     elements: [

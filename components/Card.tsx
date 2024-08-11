@@ -5,30 +5,45 @@ import { cn } from "@/lib/utils";
 import { GoGlobe } from "react-icons/go";
 import { GiArtificialIntelligence } from "react-icons/gi";
 import { GrCatalog } from "react-icons/gr";
-import { TbShoppingCart, TbShoppingCartBolt } from "react-icons/tb";
+import {
+  TbShoppingCart,
+  TbShoppingCartBolt,
+  TbShoppingCartHeart,
+} from "react-icons/tb";
 import { IconType } from "react-icons";
+import { Console } from "console";
 
 const iconMap: { [key: string]: IconType } = {
   globe: GoGlobe,
   ai: GiArtificialIntelligence,
   catalog: GrCatalog,
+  scw: TbShoppingCartBolt,
+  scm: TbShoppingCartHeart,
+  scmw: TbShoppingCart,
 };
 
-type IconName = "copilot" | "globe" | "ai" | "catalog";
+type IconName = "globe" | "ai" | "catalog" | "scw" | "scm" | "scmw";
 
 type CardCompProps = {
   name: string;
-  iconName: IconName;
+  iconName: IconName[];
   description: string;
   elements: string[];
   monthPrice: number;
   anualMonthPrice: number;
 };
 
-let IconComponent: any;
+let IconComponent1: any;
+let IconComponent2: any;
+let IconComponent3: any;
 
 export function Card(props: CardCompProps) {
-  IconComponent = iconMap[props.iconName];
+  let iconName1 = props.iconName[0];
+  let iconName2 = props.iconName[1];
+  let iconName3 = props.iconName[2];
+  IconComponent1 = iconMap[iconName1];
+  IconComponent2 = iconMap[iconName2];
+  IconComponent3 = iconMap[iconName3];
   return (
     <CardConst className="font-pop text-text">
       <CardSkeletonContainer>
@@ -118,13 +133,13 @@ const Skeleton = () => {
           <ClaudeLogo className="h-4 w-4 " />
         </Container> */}
         <Container className="h-12 w-12 circle-2 bg-text">
-          <GiArtificialIntelligence className="h-6 w-6 dark:text-elements" />
+          <IconComponent1 className="h-6 w-6 dark:text-elements" />
         </Container>
         <Container className="circle-3 bg-elements">
-          <IconComponent className="h-8 w-8 dark:text-text" />
+          <IconComponent2 className="h-8 w-8 dark:text-text" />
         </Container>
         <Container className="h-12 w-12 circle-4 bg-text">
-          <GrCatalog className="h-6 w-6 dark:text-elements" />
+          <IconComponent3 className="h-6 w-6 dark:text-elements" />
         </Container>
         {/* <Container className="h-8 w-8 circle-5">
           <GeminiLogo className="h-4 w-4 " />
