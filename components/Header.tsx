@@ -56,9 +56,9 @@ const Header: React.FC<HeaderProps> = () => {
 
   return (
     <header
-      className={`w-full flex justify-start items-center gap-4 py-9 px-4 md:px-0 ${
+      className={`w-full flex justify-start items-center gap-4 py-5 px-4 md:px-0 ${
         isSticky
-          ? "fixed top-0 sm:left-0 md:left-[120px] sm:right-0 md:right-[240px] bg-[#1A1C1E]/50 z-50"
+          ? "fixed top-0 sm:left-0 md:left-[var(--padding-x)] sm:right-0 md:right-[var(--padding-x)] bg-[#1A1C1E]/50 z-50"
           : ""
       } transition-all`}
     >

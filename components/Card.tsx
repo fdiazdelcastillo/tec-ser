@@ -49,20 +49,22 @@ export function Card(props: CardCompProps) {
       <CardSkeletonContainer>
         <Skeleton />
       </CardSkeletonContainer>
-      <CardTitle className="font-mont text-elements text-2xl font-semibold">
+      <CardTitle className="font-mont text-elements text-2xl font-semibold pb-[10px]">
         {props.name}
       </CardTitle>
-      <CardDescription>{props.description}</CardDescription>
+      <CardDescription className=" pb-[20px]">
+        {props.description}
+      </CardDescription>
       <div className="text-text font-normal">
-        Incluye:
-        <div className="text-base">
-          <ul className="list-disc">
+        <span className="pb[10px]">Incluye:</span>
+        <div className="text-base pb-[30px]">
+          <ul className="list-disc list-inside">
             {props.elements.map((element, index) => (
               <li key={index}>{element}</li>
             ))}
           </ul>
         </div>
-        <div className="text-elements text-center text-xl">
+        <div className="font-mont text-elements text-center text-xl">
           Precio mensual: ${props.monthPrice}
         </div>
       </div>
