@@ -56,7 +56,7 @@ export function Card(props: CardCompProps) {
         {props.description}
       </CardDescription>
       <div className="text-text font-normal">
-        <span className="pb[10px]">Incluye:</span>
+        <span className="pb-[10px]">Incluye:</span>
         <div className="text-base pb-[30px]">
           <ul className="list-disc list-inside">
             {props.elements.map((element, index) => (
