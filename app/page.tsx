@@ -16,7 +16,6 @@ export default function Home() {
       <Features />
       <Services />
       <IMCards />
-      Hola
     </main>
   );
 }
