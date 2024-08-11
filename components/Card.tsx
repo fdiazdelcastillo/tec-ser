@@ -2,38 +2,56 @@
 import { animate, motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
-import { GoCopilot, GoGlobe } from "react-icons/go";
+import { GoGlobe } from "react-icons/go";
 import { GiArtificialIntelligence } from "react-icons/gi";
 import { GrCatalog } from "react-icons/gr";
+import { TbShoppingCart, TbShoppingCartBolt } from "react-icons/tb";
+import { IconType } from "react-icons";
 
-export function CardComp() {
+const iconMap: { [key: string]: IconType } = {
+  globe: GoGlobe,
+  ai: GiArtificialIntelligence,
+  catalog: GrCatalog,
+};
+
+type IconName = "copilot" | "globe" | "ai" | "catalog";
+
+type CardCompProps = {
+  name: string;
+  iconName: IconName;
+  description: string;
+  elements: string[];
+  monthPrice: number;
+  anualMonthPrice: number;
+};
+
+let IconComponent: any;
+
+export function Card(props: CardCompProps) {
+  IconComponent = props.iconName;
   return (
-    <Card className="font-pop text-text">
+    <CardConst className="font-pop text-text">
       <CardSkeletonContainer>
         <Skeleton />
       </CardSkeletonContainer>
       <CardTitle className="font-mont text-elements text-2xl font-semibold">
-        Sitio Web
+        {props.name}
       </CardTitle>
-      <CardDescription>
-        Ideal para Startups y pequeños negocios que buscan establecer presencia
-        online
-      </CardDescription>
+      <CardDescription>{props.description}</CardDescription>
       <div className="text-text font-normal">
         Incluye:
         <div className="text-base">
           <ul className="list-disc">
-            <li>Diseño de páginas: Landing Page, Blog, Artículo</li>
-            <li>Refresco de UI anual</li>
-            <li>Despliegue (1 TB/mes)</li>
-            <li>IA Chat (1K consultas/mes)</li>
+            {props.elements.map((element, index) => (
+              <li key={index}>{element}</li>
+            ))}
           </ul>
         </div>
         <div className="text-elements text-center text-xl">
-          Precio mensual: $200
+          Precio mensual: ${props.monthPrice}
         </div>
       </div>
-    </Card>
+    </CardConst>
   );
 }
 
@@ -90,6 +108,9 @@ const Skeleton = () => {
       repeatDelay: 1,
     });
   }, []);
+
+  let icons: React.ReactNode;
+
   return (
     <div className="p-8 overflow-hidden h-full relative flex items-center justify-center">
       <div className="flex flex-row flex-shrink-0 justify-center items-center gap-2">
@@ -100,7 +121,7 @@ const Skeleton = () => {
           <GiArtificialIntelligence className="h-6 w-6 dark:text-elements" />
         </Container>
         <Container className="circle-3 bg-elements">
-          <GoGlobe className="h-8 w-8 dark:text-text" />
+          <IconComponent className="h-8 w-8 dark:text-text" />
         </Container>
         <Container className="h-12 w-12 circle-4 bg-text">
           <GrCatalog className="h-6 w-6 dark:text-elements" />
@@ -154,7 +175,7 @@ const Sparkles = () => {
   );
 };
 
-export const Card = ({
+export const CardConst = ({
   className,
   children,
 }: {

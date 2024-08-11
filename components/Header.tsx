@@ -54,7 +54,7 @@ const Header: React.FC<HeaderProps> = () => {
       <nav
         className={`${
           menuOpen ? "block" : "hidden"
-        } absolute top-[70px] md:top-0 left-0 right-0 bg-background p-4 z-40 shadow-lg md:shadow-none md:relative md:flex md:items-center md:gap-4 md:p-0 md:bg-transparent md:block transition-all`}
+        } absolute top-[70px] md:top-0 left-0 right-0 bg-[#1A1C1E] p-4 z-40 shadow-lg md:shadow-none md:relative md:flex md:items-center md:gap-4 md:p-0 md:bg-transparent md:block transition-all`}
       >
         {navbarData.map((navbarLink, index) => (
           <Link
