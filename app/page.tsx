@@ -7,7 +7,7 @@ import { Hero } from "@/components/Hero";
 export default function Home() {
   return (
     <main
-      className={`${styles.main} w-full bg-[#1A1C1E] max-w-screen-xl flex flex-col`}
+      className={`${styles.main} w-full relative bg-[#1A1C1E] max-w-screen-xl flex flex-col`}
     >
       <Header />
       <Hero />

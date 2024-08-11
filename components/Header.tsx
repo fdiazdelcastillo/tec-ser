@@ -10,7 +10,7 @@ import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 type HeaderProps = {};
 
 const Header: React.FC<HeaderProps> = () => {
-  const [activeSection, setActiveSection] = useState<string>("home");
+  const [activeSection, setActiveSection] = useState<string>("");
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const [isSticky, setIsSticky] = useState<boolean>(false); // New state for sticky header
 
@@ -48,7 +48,7 @@ const Header: React.FC<HeaderProps> = () => {
     return () => {
       sections.forEach((section) => observer.unobserve(section));
     };
-  }, []);
+  }, [activeSection]);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -56,9 +56,9 @@ const Header: React.FC<HeaderProps> = () => {
 
   return (
     <header
-      className={`w-full flex justify-start items-center gap-4 py-9 px-4 md:px-8 ${
+      className={`w-full flex justify-start items-center gap-4 py-9 px-4 md:px-0 ${
         isSticky
-          ? "fixed top-0 left-[240px] right-[240px] bg-[#1A1C1E] z-50"
+          ? "fixed top-0 sm:left-0 md:left-[120px] sm:right-0 md:right-[240px] bg-[#1A1C1E]/50 z-50"
           : ""
       } transition-all`}
     >
@@ -77,13 +77,13 @@ const Header: React.FC<HeaderProps> = () => {
       <nav
         className={`${
           menuOpen ? "block" : "hidden"
-        } absolute top-[70px] md:top-0 left-0 right-0 bg-[#1A1C1E] p-4 z-40 shadow-lg md:shadow-none md:relative md:flex md:items-center md:gap-4 md:p-0 md:bg-transparent md:block transition-all`}
+        } absolute top-[70px] md:top-0 left-0 right-0 bg-transparent p-4 z-40 shadow-lg md:shadow-none md:relative md:flex md:items-center md:gap-4 md:p-0 md:bg-transparent md:block transition-all`}
       >
         {navbarData.map((navbarLink, index) => (
           <Link
             key={index}
             href={navbarLink.link}
-            // scroll={false}
+            scroll={true}
             className={`block md:py-2 sm:py-0 text-center font-pop text-base font-normal md:inline ${
               activeSection === navbarLink.link.substring(1)
                 ? "text-primary"
