@@ -40,7 +40,8 @@ export const InfiniteMovingCards = ({
       getSpeed();
       setStart(true);
     }
-  }, [direction, speed]);
+    // }, [direction, speed]);
+  }, []);
 
   const getDirection = useCallback(() => {
     if (containerRef.current) {
