@@ -3,8 +3,8 @@ import styles from "./page.module.css";
 import Header from "@/components/Header";
 import Services from "@/components/Services";
 import { Hero } from "@/components/Hero";
-import { IMCards } from "@/components/IMCards";
 import { Features } from "@/components/Features";
+import { Testimonials } from "@/components/Testimonials";
 
 export default function Home() {
   return (
@@ -15,7 +15,7 @@ export default function Home() {
       <Hero />
       <Features />
       <Services />
-      <IMCards />
+      <Testimonials />
     </main>
   );
 }

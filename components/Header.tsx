@@ -14,7 +14,7 @@ const Header: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const homeSection = document.getElementById("home");
+      const homeSection = document.getElementById("header");
       if (homeSection) {
         const homeSectionHeight = homeSection.offsetHeight;
         setIsSticky(window.scrollY > homeSectionHeight);
@@ -73,7 +73,8 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className={`w-full flex justify-start items-center gap-4 py-5 px-4 md:px-0 ${
+      id="header"
+      className={`w-full flex justify-start items-center gap-4 py-5 px-4 md:px-0 bg-[#1A1C1E] md:bg-[#1A1C1E]/50 ${
         isSticky
           ? "fixed top-0 sm:left-0 md:left-[var(--padding-x)] sm:right-0 md:right-[var(--padding-x)] z-50"
           : ""
@@ -94,7 +95,7 @@ const Header: React.FC = () => {
       <nav
         className={`${
           menuOpen ? "block" : "hidden"
-        } absolute top-[70px] bg-[#1A1C1E] md:top-0 left-0 right-0 p-4 z-40 shadow-lg md:shadow-none md:relative md:flex sm:block md:items-center md:gap-4 md:p-0 md:bg-transparent md:bg-[#1A1C1E]/50 transition-all`}
+        } absolute top-[70px] md:top-0 left-0 right-0 p-4 z-40 shadow-lg md:shadow-none md:relative md:flex sm:block md:items-center md:gap-4 md:p-0 transition-all`}
       >
         {navbarData.map((navbarLink, index) => (
           <Link
