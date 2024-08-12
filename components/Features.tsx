@@ -5,7 +5,7 @@ import { WobbleCard } from "./ui/wobble-card";
  
 export function Features() {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full mb-24 ">
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full mb-24 px-3 xl:px-0 ">
       <WobbleCard
         containerClassName="col-span-1 h-full bg-secondary min-h-[300px]"
         className=""
@@ -31,7 +31,7 @@ export function Features() {
           width={186}
           height={124}
           alt="linear demo image"
-          className="absolute -right-4 bottom-2 object-contain rounded-2xl"
+          className="absolute -right-4 bottom-2 object-contain rounded-2xl max-w-36 sm:max-w-full"
         />
       </WobbleCard>
       <WobbleCard containerClassName="col-span-1  bg-primary min-h-[300px] xl:min-h-[300px]">
@@ -81,7 +81,7 @@ export function Features() {
           width={223}
           height={152}
           alt="linear demo image"
-          className="absolute right-8 bottom-0.5 object-contain rounded-2xl"
+          className="absolute right-8 bottom-0.5 object-contain rounded-2xl max-w-36 sm:max-w-full"
         />
       </WobbleCard>
       <WobbleCard containerClassName="col-span-1 min-h-[300px] bg-primary">
