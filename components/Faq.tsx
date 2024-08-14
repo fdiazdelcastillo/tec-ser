@@ -5,9 +5,9 @@ import {Accordion} from "./Accordion";
 export const Faq = () => {
 
     return (
-        <div className="mt-24 px-10">
+        <div className="mt-24 px-3 md:px-10">
             <Accordion
-                title={<span>¿Qué significa el despliegue de 1 TB/mes?</span>}
+                title={<span className="text-xl">¿Qué significa el despliegue de 1 TB/mes?</span>}
                 answer={
                 <>
                     <p className="mt-6">
@@ -37,7 +37,7 @@ export const Faq = () => {
             }
            />
            <Accordion
-                title={<span>¿Cómo funciona el refresco de UI?</span>}
+                title={<span className="text-xl">¿Cómo funciona el refresco de UI?</span>}
                 answer={
                 <>
                     <p className="mt-5">
@@ -67,7 +67,7 @@ export const Faq = () => {
             }
            />
            <Accordion
-                title={<span> ¿Qué es la IA Chat y cómo beneficia a mi negocio?</span>}
+                title={<span className="text-xl"> ¿Qué es la IA Chat y cómo beneficia a mi negocio?</span>}
                 answer={
                 <>
                     <p className="mt-6">
