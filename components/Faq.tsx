@@ -45,19 +45,19 @@ export const Faq = () => {
                     </p>
                     <ol className="list-decimal list-outside ml-4">
                         <li>
-                            Atención al Cliente 24/7**: Con el IA Chat, tus clientes pueden obtener respuestas inmediatas a sus preguntas en cualquier momento del día, mejorando significativamente la satisfacción del cliente.
+                            Atención al Cliente 24/7: Con el IA Chat, tus clientes pueden obtener respuestas inmediatas a sus preguntas en cualquier momento del día, mejorando significativamente la satisfacción del cliente.
                         </li>
                         <li>
-                            Aumento de la Eficiencia**: Automatiza tareas repetitivas como responder preguntas frecuentes, gestionar citas o procesar pedidos, permitiendo que tu equipo se enfoque en tareas más estratégicas.
+                            Aumento de la Eficiencia: Automatiza tareas repetitivas como responder preguntas frecuentes, gestionar citas o procesar pedidos, permitiendo que tu equipo se enfoque en tareas más estratégicas.
                         </li>
                         <li>
-                            Experiencia Personalizada**: El IA Chat puede analizar las interacciones de los clientes y ofrecer recomendaciones personalizadas, lo que aumenta la probabilidad de conversión y fidelización.
+                            Experiencia Personalizada: El IA Chat puede analizar las interacciones de los clientes y ofrecer recomendaciones personalizadas, lo que aumenta la probabilidad de conversión y fidelización.
                         </li>
                         <li>
-                            Reducción de Costos**: Al automatizar la atención al cliente, puedes reducir los costos operativos asociados con la contratación y capacitación de personal adicional, sin comprometer la calidad del servicio.
+                            Reducción de Costos: Al automatizar la atención al cliente, puedes reducir los costos operativos asociados con la contratación y capacitación de personal adicional, sin comprometer la calidad del servicio.
                         </li>
                         <li>
-                            Integración Sencilla**: Se puede integrar fácilmente con tu sitio web, redes sociales y otras plataformas de comunicación, asegurando una experiencia coherente y fluida para tus clientes.
+                            Integración Sencilla: Se puede integrar fácilmente con tu sitio web, redes sociales y otras plataformas de comunicación, asegurando una experiencia coherente y fluida para tus clientes.
                         </li>
                     </ol>
                     <p>
