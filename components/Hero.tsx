@@ -7,7 +7,7 @@ const World = dynamic(() => import("./ui/globe").then((m) => m.World), {
   ssr: false,
 });
 
-export function Hero() {
+export const Hero = () => {
   const globeConfig = {
     pointSize: 4,
     globeColor: "#4A5A7A",
@@ -431,4 +431,4 @@ export function Hero() {
       </div>
     </section>
   );
-}
+};

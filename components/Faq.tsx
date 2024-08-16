@@ -1,8 +1,11 @@
 "use client";
 
+import React from "react";
 import { Accordion } from "./Accordion";
 
-export const Faq = () => {
+type FaqProps = {};
+
+export const Faq: React.FC<FaqProps> = () => {
   return (
     <section id="faq" className="mt-24 px-3 md:px-10">
       <Accordion
