@@ -9,8 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@radix-ui/react-label": "^2.1.0",
     "@react-three/drei": "^9.109.5",
+=======
+    "@pyncz/tailwind-mask-image": "^2.0.0",
+>>>>>>> v0-comparison-table
     "@react-three/fiber": "^8.16.8",
     "@tabler/icons-react": "^3.12.0",
     "clsx": "^2.1.1",
@@ -18,10 +22,16 @@
     "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18",
+<<<<<<< HEAD
     "react-icons": "^5.2.1",
     "tailwind-merge": "^2.5.2",
     "three": "^0.167.1",
     "three-globe": "^2.31.1"
+=======
+    "tailwind-merge": "^2.4.0",
+    "tailwind-scrollbar": "^3.1.0",
+    "three": "^0.167.1"
+>>>>>>> v0-comparison-table
   },
   "devDependencies": {
     "@types/node": "^20",
