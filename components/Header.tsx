@@ -81,7 +81,9 @@ const Header: React.FC = () => {
       } transition-all`}
     >
       <div className="z-50">
-        <Image src={Logo} alt="omnitrek logo" width={180} />
+        <Link href="#home">
+          <Image src={Logo} alt="omnitrek logo" width={180} />
+        </Link>
       </div>
       <div className="md:hidden bg-transparent w-full flex justify-end z-50">
         <button onClick={toggleMenu} aria-label="Toggle menu">
