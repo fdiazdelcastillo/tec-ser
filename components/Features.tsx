@@ -5,7 +5,10 @@ import { WobbleCard } from "./ui/wobble-card";
 
 export function Features() {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full mb-24 px-3 xl:px-0 ">
+    <section
+      id="features"
+      className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full mb-24 px-3 xl:px-0 "
+    >
       <WobbleCard
         containerClassName="col-span-1 h-full bg-secondary min-h-[300px]"
         className=""
@@ -99,6 +102,6 @@ export function Features() {
           disponible para tus clientes, sin costos sorpresa.
         </p>
       </WobbleCard>
-    </div>
+    </section>
   );
 }
