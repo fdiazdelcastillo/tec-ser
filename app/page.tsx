@@ -6,6 +6,7 @@ import { Hero } from "@/components/Hero";
 import { Features } from "@/components/Features";
 import { Testimonials } from "@/components/Testimonials";
 import { Faq } from "@/components/Faq";
+import { ContactInfo } from "@/components/ContactInfo";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Services />
       <Faq />
       <Testimonials />
+      <ContactInfo/>
     </main>
   );
 }
