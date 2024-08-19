@@ -15,7 +15,7 @@ export type ComparisonTableProps = {
 
 const ComparisonTableCard: Component<ComparisonTableCardProps> = (props) => {
   return (
-    <div className="flex flex-shrink-0 flex-col py-14 px-6 gap-7 text-text items-center font-mont font-semibold text-base max-md:text-sm border-l-2 border-background w-[197px] max-md:w-44 relative">
+    <div className="flex flex-shrink-0 flex-col py-14 px-6 gap-7 text-text items-center font-mont font-semibold text-base max-md:text-sm border-l-2 border-background w-[187px] max-md:w-44 relative">
       <div
         style={{
           backgroundImage: "url(/noise.webp)",
@@ -63,7 +63,7 @@ const ComparisonTable: Component<ComparisonTableProps> = (props) => {
   }
 
   return (
-    <div className="flex flex-row bg-background flex-grow rounded-[20px] border-solid border-background border-2 [background-image:radial-gradient(53%_52%_at_top,rgba(255,255,255,0.15),rgba(255,255,255,0))] max-xl:overflow-x-scroll scroll-smooth overflow-hidden">
+    <div className="flex flex-row mx-8 max-sm:mx-5 mt-20 flex-grow rounded-[20px] border-solid border-background border-2 [background-image:radial-gradient(53%_52%_at_top,rgba(255,255,255,0.15),rgba(255,255,255,0))] max-xl:overflow-x-scroll scroll-smooth overflow-hidden">
       <div className="flex flex-col py-14 px-10 max-sm:px-8 gap-7 text-text font-mont text-base max-md:text-sm font-semibold [background-image:radial-gradient(143%_46%_at_bottom_left_,rgba(61,138,255,0.50),rgba(34,71,126,0.50),rgba(13,17,23,0.2))] max-lg:sticky -left-1 sm:sticky max-xl:bg-background z-[1]">
         <div
           style={{
