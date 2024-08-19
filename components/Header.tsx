@@ -11,19 +11,21 @@ const Header: React.FC = () => {
   const [activeSection, setActiveSection] = useState<string>("");
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const [isSticky, setIsSticky] = useState<boolean>(false);
-  const [lastScrollTop, setLastScrollTop] = useState<number>(0);
+  const [lastScrollY, setLastScrollY] = useState<number>(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollTop = window.scrollY || document.documentElement.scrollTop;
-      if (scrollTop < lastScrollTop) {
-        // Scrolling up
+      const currentScrollY = window.scrollY;
+
+      // Check if the user is scrolling up
+      if (currentScrollY < lastScrollY) {
         setIsSticky(true);
       } else {
-        // Scrolling down
         setIsSticky(false);
       }
-      setLastScrollTop(scrollTop <= 0 ? 0 : scrollTop); // For Mobile or negative scrolling
+
+      // Update lastScrollY to current scroll position
+      setLastScrollY(currentScrollY);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -31,7 +33,7 @@ const Header: React.FC = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [lastScrollTop]);
+  }, [lastScrollY]);
 
   useEffect(() => {
     const sections = document.querySelectorAll("section");
@@ -51,6 +53,24 @@ const Header: React.FC = () => {
 
     return () => {
       sections.forEach((section) => observer.unobserve(section));
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll("section");
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        if (window.scrollY >= sectionTop - sectionHeight * 0.5) {
+          setActiveSection(section.getAttribute("id") || "");
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
