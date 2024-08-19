@@ -11,20 +11,14 @@ const Header: React.FC = () => {
   const [activeSection, setActiveSection] = useState<string>("");
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const [isSticky, setIsSticky] = useState<boolean>(false);
-  const [lastScrollTop, setLastScrollTop] = useState<number>(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollTop =
-        window.pageYOffset || document.documentElement.scrollTop;
-      if (scrollTop < lastScrollTop) {
-        // Scrolling up
-        setIsSticky(true);
-      } else {
-        // Scrolling down
-        setIsSticky(false);
+      const homeSection = document.getElementById("header");
+      if (homeSection) {
+        const homeSectionHeight = homeSection.offsetHeight;
+        setIsSticky(window.scrollY > homeSectionHeight);
       }
-      setLastScrollTop(scrollTop <= 0 ? 0 : scrollTop); // For Mobile or negative scrolling
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -32,7 +26,7 @@ const Header: React.FC = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [lastScrollTop]);
+  }, []);
 
   useEffect(() => {
     const sections = document.querySelectorAll("section");
@@ -52,6 +46,24 @@ const Header: React.FC = () => {
 
     return () => {
       sections.forEach((section) => observer.unobserve(section));
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll("section");
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        if (window.scrollY >= sectionTop - sectionHeight * 0.5) {
+          setActiveSection(section.getAttribute("id") || "");
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
