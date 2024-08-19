@@ -10,11 +10,10 @@ import { ContactInfo } from "@/components/ContactInfo";
 import ComparisonTable from "@/components/ComparisonTable";
 import Check from "@/public/Check.svg";
 
-
 export default function Home() {
   return (
     <main
-      className={`${styles.main} w-full relative bg-[#1A1C1E] max-w-screen-xl flex flex-col`}
+      className={`${styles.main} w-full relative bg-[#1A1C1E] max-w-screen-xl flex flex-col md:gap-[7rem] sm:gap-[5rem]`}
     >
       <Header />
       <Hero />
@@ -128,7 +127,7 @@ export default function Home() {
       />
       <Faq />
       <Testimonials />
-      <ContactInfo/>
+      <ContactInfo />
     </main>
   );
 }
