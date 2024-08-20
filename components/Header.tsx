@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Logo from "@/assets/images/omnitrek-hor-white.svg";
 import { navbarData } from "@/data/Data";
@@ -11,21 +11,48 @@ const Header: React.FC = () => {
   const [activeSection, setActiveSection] = useState<string>("");
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const [isSticky, setIsSticky] = useState<boolean>(false);
+  const [scrollDirection, setScrollDirection] = useState<string>("up");
   const [lastScrollY, setLastScrollY] = useState<number>(0);
+  const headerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      // Check if the user is scrolling up
-      if (currentScrollY < lastScrollY) {
+      // Determine scroll direction
+      if (currentScrollY > lastScrollY) {
+        setScrollDirection("down");
+      } else {
+        setScrollDirection("up");
+      }
+
+      // Make the header sticky
+      const stickyThreshold = 100; // Adjust this value to control when the header becomes sticky
+      if (currentScrollY > stickyThreshold) {
         setIsSticky(true);
       } else {
         setIsSticky(false);
       }
 
-      // Update lastScrollY to current scroll position
       setLastScrollY(currentScrollY);
+
+      // Update the active section based on scroll position
+      const sections = navbarData.map((item) =>
+        document.getElementById(item.link.substring(1))
+      );
+      const currentSection = sections.find((section) => {
+        if (section) {
+          const { top, bottom } = section.getBoundingClientRect();
+          return (
+            top <= window.innerHeight / 2 && bottom >= window.innerHeight / 2
+          );
+        }
+        return false;
+      });
+
+      if (currentSection) {
+        setActiveSection(currentSection.id);
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -41,14 +68,21 @@ const Header: React.FC = () => {
 
   return (
     <header
+      ref={headerRef}
       id="header"
-      className={`w-full flex justify-start items-center gap-4 py-5 px-4 md:px-0 bg-[rgba(255, 255, 255, 0.5)] backdrop-blur-lg -webkit-backdrop-filter:blur(10px) ${
+      className={`w-full flex justify-start items-center gap-4 py-5 px-4 md:px-0 bg-white bg-opacity-50 transition-transform duration-300 ease-in-out ${
         isSticky
-          ? "fixed top-0 sm:left-0 md:left-[var(--padding-x)] sm:right-0 md:right-[var(--padding-x)] z-50"
+          ? scrollDirection === "up"
+            ? "fixed top-0 left-0 right-0 z-50 transform translate-y-0"
+            : "fixed top-0 left-0 right-0 z-50 transform -translate-y-full"
           : ""
-      } transition-all`}
+      }`}
+      style={{
+        backdropFilter: "blur(10px)",
+        WebkitBackdropFilter: "blur(10px)", // For older WebKit browsers
+      }}
     >
-      <div className="z-50">
+      <div className="z-45">
         <Link href="#home">
           <Image src={Logo} alt="omnitrek logo" width={180} />
         </Link>
@@ -65,7 +99,7 @@ const Header: React.FC = () => {
       <nav
         className={`${
           menuOpen ? "block" : "hidden"
-        } absolute top-[70px] md:top-0 left-0 right-0 p-4 z-40 shadow-lg md:shadow-none backdrop-blur-lg -webkit-backdrop-filter:blur(10px) md:relative md:flex sm:block md:items-center md:gap-4 md:p-0 transition-all`}
+        } absolute top-[70px] md:top-0 left-0 right-0 p-4 z-40 shadow-lg md:shadow-none md:relative md:flex sm:block md:items-center md:gap-4 md:p-0 transition-all`}
       >
         {navbarData.map((navbarLink, index) => (
           <Link

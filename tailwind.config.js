@@ -44,6 +44,9 @@ module.exports = {
         },
       },
     },
+    backdropBlur: {
+      lg: "10px", // Ensure this value exists or adjust as needed
+    },
   },
   plugins: [addVariablesForColors],
 };
