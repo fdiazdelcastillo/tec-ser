@@ -35,45 +35,6 @@ const Header: React.FC = () => {
     };
   }, [lastScrollY]);
 
-  useEffect(() => {
-    const sections = document.querySelectorAll("section");
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
-        });
-      },
-      { threshold: 0.5 }
-    );
-
-    sections.forEach((section) => observer.observe(section));
-
-    return () => {
-      sections.forEach((section) => observer.unobserve(section));
-    };
-  }, []);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = document.querySelectorAll("section");
-      sections.forEach((section) => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.offsetHeight;
-        if (window.scrollY >= sectionTop - sectionHeight * 0.5) {
-          setActiveSection(section.getAttribute("id") || "");
-        }
-      });
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
@@ -81,7 +42,7 @@ const Header: React.FC = () => {
   return (
     <header
       id="header"
-      className={`w-full flex justify-start items-center gap-4 py-5 px-4 md:px-0 bg-transparent backdrop-blur ${
+      className={`w-full flex justify-start items-center gap-4 py-5 px-4 md:px-0 bg-transparent backdrop-blur-sm md:backdrop-blur ${
         isSticky
           ? "fixed top-0 sm:left-0 md:left-[var(--padding-x)] sm:right-0 md:right-[var(--padding-x)] z-50"
           : ""
@@ -104,7 +65,7 @@ const Header: React.FC = () => {
       <nav
         className={`${
           menuOpen ? "block" : "hidden"
-        } absolute top-[70px] md:top-0 left-0 right-0 p-4 z-40 shadow-lg md:shadow-none md:relative md:flex sm:block md:items-center md:gap-4 md:p-0 transition-all`}
+        } absolute top-[70px] md:top-0 left-0 right-0 p-4 z-40 shadow-lg md:shadow-none backdrop-blur-sm md:backdrop-blur md:relative md:flex sm:block md:items-center md:gap-4 md:p-0 transition-all`}
       >
         {navbarData.map((navbarLink, index) => (
           <Link

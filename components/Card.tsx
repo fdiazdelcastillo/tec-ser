@@ -135,13 +135,13 @@ const Skeleton = () => {
           <ClaudeLogo className="h-4 w-4 " />
         </Container> */}
         <Container className="h-12 w-12 circle-2 bg-text">
-          <IconComponent1 className="h-6 w-6 dark:text-elements" />
+          <IconComponent1 className="h-6 w-6 text-elements" />
         </Container>
         <Container className="circle-3 bg-elements">
-          <IconComponent2 className="h-8 w-8 dark:text-text" />
+          <IconComponent2 className="h-8 w-8 text-text" />
         </Container>
         <Container className="h-12 w-12 circle-4 bg-text">
-          <IconComponent3 className="h-6 w-6 dark:text-elements" />
+          <IconComponent3 className="h-6 w-6 text-elements" />
         </Container>
         {/* <Container className="h-8 w-8 circle-5">
           <GeminiLogo className="h-4 w-4 " />
