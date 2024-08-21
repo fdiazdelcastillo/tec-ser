@@ -23,8 +23,8 @@ body {
 .fixed {
   position: fixed !important;
   top: 0;
-  left: 0;
-  right: 0;
+  left: var(--padding-x);
+  right: var(--padding-x);
   z-index: 50;
 }
 
