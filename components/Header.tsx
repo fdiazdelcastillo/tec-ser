@@ -99,7 +99,7 @@ const Header: React.FC = () => {
       <nav
         className={`${
           menuOpen ? "block" : "hidden"
-        } absolute top-[70px] md:top-0 left-0 right-0 b p-4 z-40 shadow-lg md:shadow-none md:relative lg:flex sm:block md:items-center md:gap-4 md:p-0 transition-all`}
+        } absolute top-[70px] md:top-0 left-0 right-0 b p-4 z-40 shadow-lg md:shadow-none md:relative lg:flex md:items-center md:gap-4 md:p-0 transition-all`}
         style={{
           backdropFilter: "blur(10px)",
           WebkitBackdropFilter: "blur(10px)", // For older WebKit browsers

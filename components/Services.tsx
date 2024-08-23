@@ -5,7 +5,7 @@ type ServicesProps = {};
 
 const Services: React.FC<ServicesProps> = (props) => {
   return (
-    <section id="services" className="flex justify-start flex-wrap gap-y-8">
+    <section id="services" className="flex flex-wrap gap-y-8">
       {servicesData.map((service, index) => (
         <Card
           key={index}
