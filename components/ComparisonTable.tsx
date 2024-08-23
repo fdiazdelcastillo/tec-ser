@@ -63,7 +63,7 @@ const ComparisonTable: Component<ComparisonTableProps> = (props) => {
   }
 
   return (
-    <div className="flex flex-row mx-8 max-sm:mx-5 mt-20 flex-grow rounded-[20px] border-solid border-background border-2 [background-image:radial-gradient(53%_52%_at_top,rgba(255,255,255,0.15),rgba(255,255,255,0))] max-xl:overflow-x-scroll scroll-smooth overflow-hidden">
+    <div className="flex flex-row justify-normal mx-8 max-sm:mx-5 flex-grow rounded-[20px] border-solid border-background border-2 [background-image:radial-gradient(53%_52%_at_top,rgba(255,255,255,0.15),rgba(255,255,255,0))] max-xl:overflow-x-scroll scroll-smooth overflow-hidden">
       <div className="flex flex-col py-14 px-10 max-sm:px-8 gap-7 text-text font-mont text-base max-md:text-sm font-semibold [background-image:radial-gradient(143%_46%_at_bottom_left_,rgba(61,138,255,0.50),rgba(34,71,126,0.50),rgba(13,17,23,0.2))] max-lg:sticky -left-1 sm:sticky max-xl:bg-background z-[1]">
         <div
           style={{

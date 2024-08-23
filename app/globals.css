@@ -6,26 +6,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  --padding-x: calc((100%-1440px) / 2);
+  --padding-x: calc((100vw - 1440px) / 2);
 }
 
 html,
 body {
   font-family: var(--font-montserrat), sans-serif;
-}
-
-#header {
-  position: relative;
-  width: 100%;
-  transition: transform 0.3s ease-in-out;
-}
-
-.fixed {
-  position: fixed !important;
-  top: 0;
-  left: var(--padding-x);
-  right: var(--padding-x);
-  z-index: 50;
 }
 
 .translate-y-0 {
@@ -34,10 +20,4 @@ body {
 
 .-translate-y-full {
   transform: translateY(-100%);
-}
-
-nav {
-  backdrop-filter: blur(10px); /* Standard property */
-  -webkit-backdrop-filter: blur(10px); /* WebKit specific */
-  -ms-backdrop-filter: blur(10px); /* Older Edge versions */
 }

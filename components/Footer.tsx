@@ -2,7 +2,7 @@ type FooterProps = {};
 
 const Footer: Component<FooterProps> = (props) => {
   return (
-    <div className="flex flex-col items-center font-thin bg-background py-4 mt-7 w-auto">
+    <div className="flex flex-col items-center font-thin bg-background py-4 mt-7 w-screen">
       <div className="font-pop font-light text-sm text-text text-center">
         ©2024 with ❤ by{" "}
         <a

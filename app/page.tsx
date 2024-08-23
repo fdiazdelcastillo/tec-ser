@@ -14,7 +14,7 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <main
-      className={`${styles.main} w-full relative bg-[#1A1C1E] max-w-screen-xl flex flex-col md:gap-[7rem] sm:gap-[5rem]`}
+      className={`${styles.main} w-full relative bg-[#1A1C1E] max-w-screen-xl flex flex-col items-center gap-16 md:gap-24 px-1 md:px-4`}
     >
       <Header />
       <Hero />
