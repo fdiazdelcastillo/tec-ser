@@ -13,11 +13,11 @@ export function FeedbackForm() {
   };
 
   return (
-    <form name="feedback" onSubmit={handleFormSubmit}>
+    <form name="feedback" onSubmit={handleFormSubmit} className="flex flex-col items-center bg-background w-full">
       <input type="hidden" name="form-name" value="feedback" />
       <input name="name" type="text" placeholder="Name" required />
       <input name="email" type="text" placeholder="Email (optional)" />
-      <button type="submit">Submit</button>
+      <button type="submit" className="text-text">Submit</button>
     </form>
   );
 }
