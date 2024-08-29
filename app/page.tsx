@@ -10,7 +10,7 @@ import { ContactInfo } from "@/components/ContactInfo";
 import ComparisonTable from "@/components/ComparisonTable";
 import Check from "@/public/Check.svg";
 import Footer from "@/components/Footer";
-import { ContactForm } from "@/components/ContactForm";
+import { FeedbackForm } from "@/components/FeedbackForm";
 
 export default function Home() {
   return (
@@ -130,7 +130,7 @@ export default function Home() {
       <Faq />
       <Testimonials />
       <ContactInfo />
-      <ContactForm />
+      <FeedbackForm />
       <Footer />
     </main>
   );
