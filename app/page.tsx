@@ -129,8 +129,7 @@ export default function Home() {
       />
       <Faq />
       <Testimonials />
-      <ContactInfo />
-      
+      <ContactInfo /> 
       <Footer />
     </main>
   );
