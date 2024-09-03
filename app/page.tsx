@@ -130,7 +130,7 @@ export default function Home() {
       <Faq />
       <Testimonials />
       <ContactInfo />
-      <FeedbackForm />
+      
       <Footer />
     </main>
   );

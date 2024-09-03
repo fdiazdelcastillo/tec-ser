@@ -1,15 +1,26 @@
 "use client";
+import { useState } from "react";
 
 export function FeedbackForm() {
+const [message, setMessage] = useState(null);
+
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
-    await fetch("/__forms.html", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
-    });
-    // Success & error handling should come here
+    try {
+      const response = await fetch("/__forms.html", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString(),
+      });
+      if (response.ok) {
+        setMessage("Thank you for your feedback!");
+      } else {
+        setMessage("Oops! Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      setMessage("There was an error submitting your feedback. Please try again.");
+    }
   };
 
   return (
