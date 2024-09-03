@@ -18,12 +18,15 @@ export function SignupForm() {
         body: new URLSearchParams(formData).toString(),
       });
       if (response.ok) {
-        setMessage("Thank you for your feedback!");
+        // Mostrar mensaje de éxito
+        alert("Thank you for your feedback!");
       } else {
-        setMessage("Oops! Something went wrong. Please try again.");
+        // Mostrar mensaje de error
+        alert("Oops! There was a problem with your submission.");
       }
     } catch (error) {
-      setMessage("There was an error submitting your feedback. Please try again.");
+      // Manejo de errores de red u otros errores
+      alert("Something went wrong. Please try again later.");
     }
   };  
   return (
