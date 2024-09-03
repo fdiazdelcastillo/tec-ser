@@ -28,6 +28,6 @@
     ".next/types/**/*.ts",
     "components/FeedbackForm.jsx",
     "components/ContactForm.jsx"
-  ],
+, "components/SignupForm.jsx"  ],
   "exclude": ["node_modules"]
 }
