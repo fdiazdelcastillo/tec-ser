@@ -28,9 +28,15 @@ export default function Home() {
             precio: (
               <>
                 <div>
-                  us$ <span className="font-bold text-xl font-mont">200</span>
+                  us${" "}
+                  <span className="font-bold md:text-xl max-sm:text-base font-mont">
+                    200
+                  </span>
                   mes <br />
-                  us$ <span className="font-bold text-xl font-mont">160</span>
+                  us${" "}
+                  <span className="font-bold md:text-xl max-sm:text-base font-mont">
+                    160
+                  </span>
                   mes
                 </div>
               </>
@@ -45,9 +51,15 @@ export default function Home() {
             precio: (
               <>
                 <div>
-                  us$ <span className="font-bold text-xl font-mont">400</span>
+                  us${" "}
+                  <span className="font-bold md:text-xl max-sm:text-base font-mont">
+                    400
+                  </span>
                   mes <br />
-                  us$ <span className="font-bold text-xl font-mont">320</span>
+                  us${" "}
+                  <span className="font-bold md:text-xl max-sm:text-base font-mont">
+                    320
+                  </span>
                   mes
                 </div>
               </>
@@ -62,9 +74,15 @@ export default function Home() {
             precio: (
               <>
                 <div>
-                  us$ <span className="font-bold text-xl font-mont">600</span>
+                  us${" "}
+                  <span className="font-bold md:text-xl max-sm:text-base font-mont">
+                    600
+                  </span>
                   mes <br />
-                  us$ <span className="font-bold text-xl font-mont">480</span>
+                  us${" "}
+                  <span className="font-bold md:text-xl max-sm:text-base font-mont">
+                    480
+                  </span>
                   mes
                 </div>
               </>
@@ -79,9 +97,15 @@ export default function Home() {
             precio: (
               <>
                 <div>
-                  us$ <span className="font-bold text-xl font-mont">1000</span>
+                  us${" "}
+                  <span className="font-bold md:text-xl max-sm:text-base font-mont">
+                    1000
+                  </span>
                   mes <br />
-                  us$ <span className="font-bold text-xl font-mont">800</span>
+                  us${" "}
+                  <span className="font-bold md:text-xl max-sm:text-base font-mont">
+                    800
+                  </span>
                   mes
                 </div>
               </>
@@ -96,9 +120,15 @@ export default function Home() {
             precio: (
               <>
                 <div>
-                  us$ <span className="font-bold text-xl font-mont">1400</span>
+                  us${" "}
+                  <span className="font-bold md:text-xl max-sm:text-base font-mont">
+                    1400
+                  </span>
                   mes <br />
-                  us$ <span className="font-bold text-xl font-mont">1120</span>
+                  us${" "}
+                  <span className="font-bold md:text-xl max-sm:text-base font-mont">
+                    1120
+                  </span>
                   mes
                 </div>
               </>
@@ -113,9 +143,15 @@ export default function Home() {
             precio: (
               <>
                 <div>
-                  us$ <span className="font-bold text-xl font-mont">100</span>
+                  us${" "}
+                  <span className="font-bold md:text-xl max-sm:text-base font-mont">
+                    100
+                  </span>
                   mes <br />
-                  us$ <span className="font-bold text-xl font-mont">80</span>
+                  us${" "}
+                  <span className="font-bold md:text-xl max-sm:text-base font-mont">
+                    80
+                  </span>
                   mes
                 </div>
               </>
