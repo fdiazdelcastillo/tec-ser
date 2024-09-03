@@ -74,8 +74,8 @@ export function SignupForm() {
         </div>
       </form>
     </div>
-  );
-}
+  )
+};
 
 const BottomGradient = () => {
   return (

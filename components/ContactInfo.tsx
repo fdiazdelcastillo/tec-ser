@@ -6,5 +6,5 @@ export const ContactInfo = () => {
     <div className="block md:flex md:justify-between">
       <SignupForm />;
     </div>
-  );
+  )
 };
