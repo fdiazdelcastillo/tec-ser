@@ -7,7 +7,7 @@ type FaqProps = {};
 
 export const Faq: React.FC<FaqProps> = () => {
   return (
-    <section id="faq" className="px-3 md:px-10">
+    <section id="faq" className="px-3 md:px-0">
       <Accordion
         title={
           <span className="text-xl">
