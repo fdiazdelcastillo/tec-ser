@@ -66,7 +66,8 @@ export function Card(props: CardCompProps) {
         </div>
       </div>
       <div className="font-mont text-elements text-center text-xl">
-        Precio mensual: ${props.monthPrice}
+        {/* Precio mensual: ${props.monthPrice} */}
+        Monthly price: ${props.monthPrice}
       </div>
     </CardConst>
   );

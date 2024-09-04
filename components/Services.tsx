@@ -1,12 +1,12 @@
 import { Card } from "./Card";
-import { servicesData } from "@/data/Data";
+import { servicesDataEn } from "@/data/Data";
 
 type ServicesProps = {};
 
 const Services: React.FC<ServicesProps> = (props) => {
   return (
     <section id="services" className="flex flex-wrap gap-y-8">
-      {servicesData.map((service, index) => (
+      {servicesDataEn.map((service, index) => (
         <Card
           key={index}
           name={service.name}

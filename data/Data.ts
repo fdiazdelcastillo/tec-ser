@@ -20,7 +20,7 @@ type ServicesData = {
   anualMonthPrice: number;
 }[];
 
-export const servicesData: ServicesData = [
+export const servicesDataEs: ServicesData = [
   {
     name: "Sitio Web",
     iconName: ["ai", "globe", "catalog"],
@@ -99,6 +99,88 @@ export const servicesData: ServicesData = [
       "1K Consultas / mes",
       "Contextualización basada en Sitio Web / Base de Datos de Conocimiento",
       "Integración con Sitio Web",
+    ],
+    monthPrice: 100,
+    anualMonthPrice: 80,
+  },
+];
+
+export const servicesDataEn: ServicesData = [
+  {
+    name: "Website",
+    iconName: ["ai", "globe", "catalog"],
+    description:
+      "Ideal for startups and small businesses looking to establish an online presence",
+    elements: [
+      "Page design: Landing Page, Blog, Article",
+      "Annual UI refresh",
+      "Deployment (1 TB/month)",
+      "AI Chat (1K queries/month)",
+    ],
+    monthPrice: 200,
+    anualMonthPrice: 160,
+  },
+  {
+    name: "Web Catalog",
+    iconName: ["globe", "catalog", "scw"],
+    description:
+      "Ideal for growing businesses that want to showcase their products or services",
+    elements: [
+      "Design of 6 pages: Home, Catalog, Product/Service, Contact Us, Blog, Article",
+      "UI refresh every 2 years",
+      "Deployment (1 TB/month)",
+      "AI Chat (1K queries/month)",
+    ],
+    monthPrice: 400,
+    anualMonthPrice: 320,
+  },
+  {
+    name: "Web Store",
+    iconName: ["catalog", "scw", "scm"],
+    description: "Ideal for companies ready to sell online and manage orders",
+    elements: [
+      "Design of 11 pages: Home, Catalog, Product/Service, Cart, Checkout, Login, Orders, Individual Order, Contact Us, Blog, Article",
+      "UI refresh every 2 years",
+      "Deployment (1 TB/month)",
+      "AI Chat (1K queries/month)",
+    ],
+    monthPrice: 600,
+    anualMonthPrice: 480,
+  },
+  {
+    name: "Mobile Store",
+    iconName: ["scw", "scm", "scmw"],
+    description: "Ideal for businesses focused on sales through mobile devices",
+    elements: [
+      "Mobile interface with: Catalog, Product, Shopping Cart, Checkout, Login, Orders, Individual Order, Support Form",
+      "UI refresh every 2 years",
+      "Deployment (1 TB/month)",
+      "IA Chat (1K consultas/mes)",
+    ],
+    monthPrice: 1000,
+    anualMonthPrice: 800,
+  },
+  {
+    name: "Mobile & Web Store",
+    iconName: ["scm", "scmw", "ai"],
+    description: "Ideal for companies seeking a complete omnichannel solution",
+    elements: [
+      "All Mobile Store services",
+      "All Web Store services",
+      "Seamless synchronization between platforms",
+    ],
+    monthPrice: 1400,
+    anualMonthPrice: 1120,
+  },
+  {
+    name: "AI Chat",
+    iconName: ["scmw", "ai", "globe"],
+    description:
+      "Ideal for any business wanting to improve customer service 24/7",
+    elements: [
+      "1K Queries/month",
+      "Contextualization based on Website/Knowledge Base",
+      "Website Integration",
     ],
     monthPrice: 100,
     anualMonthPrice: 80,
