@@ -7,7 +7,7 @@ export function Features() {
   return (
     <section
       id="features"
-      className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full px-3 xl:px-0 "
+      className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-screen-xl w-full px-3"
     >
       <WobbleCard
         containerClassName="col-span-1 h-full bg-secondary min-h-[300px]"
