@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { div } from "three/webgpu";
 
 type ComparisonTableCardProps = {
   title: string;
