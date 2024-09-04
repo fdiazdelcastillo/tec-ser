@@ -397,9 +397,9 @@ export const Hero = () => {
   return (
     <section
       id="home"
-      className="flex flex-col items-center mt-[89px] xl:mx-60 lg:mx-20 max-sm:mx-5 md:mx-8"
+      className="flex flex-col items-center xl:mx-60 lg:mx-20 md:mx-8 "
     >
-      <div className="flex flex-col items-center mx-auto w-full relative overflow-hidden h-full xl:h-[67rem] max-lg:h-[50rem] px-4">
+      <div className="flex flex-col items-center mx-auto w-full relative overflow-hidden h-full xl:h-[53rem] lg:h-[46rem] md:h-[47rem] max-sm:h-[41rem] px-4">
         <motion.div
           initial={{
             opacity: 0,
@@ -412,13 +412,13 @@ export const Hero = () => {
           transition={{
             duration: 1,
           }}
-          className="div flex items-center flex-col gap-8 "
+          className="div flex items-center flex-col gap-8"
         >
           <h1 className=" text-center text-text xl:text-3xl md:text-2xl max-sm:text-xl ">
             Impulsa tu Negocio en la Era Digital Soluciones Web y Móviles a tu
             Medida
           </h1>
-          <p className="text-center xl:text-xl md:text-base max-sm:text-base font-normal text-neutral-700 text-text  ">
+          <p className="text-center xl:text-xl md:text-base max-sm:text-[15px] font-normal text-neutral-700 text-text">
             Desde landing pages impactantes hasta tiendas en línea completas,
             tenemos la solución perfecta para potenciar tu marca en el mundo
             digital. Con inteligencia artificial integrada y diseños frescos, te
@@ -428,7 +428,7 @@ export const Hero = () => {
           </p>
         </motion.div>
         <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-black to-white z-40" />
-        <div className="absolute xl:w-[650px] xl:bottom-48 lg:bottom-8 md:bottom-10 max-sm:bottom-24  xl:h-[630px] z-10 md:w-[550px] md:h-[530px] max-sm:w-[350px] max-sm:h-[330px]">
+        <div className="absolute xl:w-[650px] bottom-0 xl:h-[630px] z-10 md:w-[550px] md:h-[530px] max-sm:w-[350px] max-sm:h-[330px]">
           <World data={sampleArcs} globeConfig={globeConfig} />
         </div>
       </div>
