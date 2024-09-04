@@ -55,7 +55,7 @@ export function Card(props: CardCompProps) {
       <CardDescription className=" pb-[20px]">
         {props.description}
       </CardDescription>
-      <div className="text-text font-normal">
+      <div className="h-64 text-text font-normal">
         <span className="pb-[10px]">Incluye:</span>
         <div className="text-base pb-[30px]">
           <ul className="list-disc list-inside">
@@ -64,9 +64,9 @@ export function Card(props: CardCompProps) {
             ))}
           </ul>
         </div>
-        <div className="font-mont text-elements text-center text-xl">
-          Precio mensual: ${props.monthPrice}
-        </div>
+      </div>
+      <div className="font-mont text-elements text-center text-xl">
+        Precio mensual: ${props.monthPrice}
       </div>
     </CardConst>
   );
