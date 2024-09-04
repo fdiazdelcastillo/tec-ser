@@ -70,11 +70,11 @@ const Header: React.FC = () => {
     <header
       ref={headerRef}
       id="header"
-      className={`w-screen flex px-3 md:px-[var(--padding-x)] items-center gap-4 py-5 bg-white bg-opacity-50 transition-transform duration-300 ease-in-out ${
+      className={`w-screen flex items-center gap-4 py-5 bg-white bg-opacity-50 transition-transform duration-300 ease-in-out ${
         isSticky
           ? scrollDirection === "up"
-            ? "fixed top-0 left-1 md:left-0 md:px-0 right-0 z-50 transform translate-y-0"
-            : "fixed top-0 left-1 md:left-0 md:px-0 right-0 z-50 transform -translate-y-full"
+            ? "fixed top-0 left-1 md:left-[var(--padding-x)] md:px-0 right-0 z-50 transform translate-y-0"
+            : "fixed top-0 left-1 md:left-[var(--padding-x)] md:px-0 right-0 z-50 transform -translate-y-full"
           : ""
       }`}
       style={{

@@ -124,13 +124,13 @@ const Skeleton = () => {
     <div className="p-8 overflow-hidden h-full relative flex items-center justify-center">
       <div className="flex flex-row flex-shrink-0 justify-center items-center gap-2">
         <Container className="h-12 w-12 circle-2 bg-text">
-          <IconComponent1 className="h-6 w-6 dark:text-elements" />
+          <IconComponent1 className="h-6 w-6 text-elements" />
         </Container>
         <Container className="circle-3 bg-elements">
-          <IconComponent2 className="h-8 w-8 dark:text-text" />
+          <IconComponent2 className="h-8 w-8 text-text" />
         </Container>
         <Container className="h-12 w-12 circle-4 bg-text">
-          <IconComponent3 className="h-6 w-6 dark:text-elements" />
+          <IconComponent3 className="h-6 w-6 text-elements" />
         </Container>
       </div>
 
@@ -189,7 +189,8 @@ export const CardConst = ({
   return (
     <div
       className={cn(
-        "max-w-[var(--service-card-width)] w-full mx-auto p-8 rounded-xl border border-[rgba(255,255,255,0.10)] dark:bg-[#0D1117] bg-gray-100 shadow-[2px_4px_16px_0px_rgba(248,248,248,0.06)_inset] group",
+        "max-w-[var(--service-card-width)] w-full mx-auto p-8 rounded-xl border border-[rgba(255,255,255,0.10)] bg-gray-100 shadow-[2px_4px_16px_0px_rgba(248,248,248,0.06)_inset] group",
+        // "max-w-[var(--service-card-width)] w-full mx-auto p-8 rounded-xl border border-[rgba(255,255,255,0.10)] dark:bg-[#0D1117] bg-gray-100 shadow-[2px_4px_16px_0px_rgba(248,248,248,0.06)_inset] group",
         className
       )}
     >
@@ -208,7 +209,8 @@ export const CardTitle = ({
   return (
     <h3
       className={cn(
-        "text-lg font-semibold text-gray-800 dark:text-white py-2",
+        "text-lg font-semibold text-gray-800 py-2",
+        // "text-lg font-semibold text-gray-800 dark:text-white py-2",
         className
       )}
     >
@@ -227,7 +229,8 @@ export const CardDescription = ({
   return (
     <p
       className={cn(
-        "text-base text-text font-normal text-neutral-600 dark:text-neutral-400 max-w-sm",
+        "text-base text-text font-normal text-neutral-600 max-w-sm",
+        // "text-base text-text font-normal text-neutral-600 dark:text-neutral-400 max-w-sm",
         className
       )}
     >
@@ -251,7 +254,8 @@ export const CardSkeletonContainer = ({
         "h-[15rem] md:h-[20rem] rounded-xl z-40",
         className,
         showGradient &&
-          "bg-neutral-300 dark:bg-[rgba(40,40,40,0.70)] [mask-image:radial-gradient(40%_40%_at_50%_50%,#6A9AE6_0%,transparent_100%)]"
+          "bg-neutral-300 [mask-image:radial-gradient(40%_40%_at_50%_50%,#6A9AE6_0%,transparent_100%)]"
+        // "bg-neutral-300 dark:bg-[rgba(40,40,40,0.70)] [mask-image:radial-gradient(40%_40%_at_50%_50%,#6A9AE6_0%,transparent_100%)]"
       )}
     >
       {children}
