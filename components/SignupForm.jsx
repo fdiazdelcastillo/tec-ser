@@ -32,30 +32,30 @@ export function SignupForm() {
   return (
     <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white bg-background">
       <h2 className="font-bold text-xl font-mont text-text">
-      Contáctanos
+        Contact us.
       </h2>
       <p className="text-text font-pop text-sm max-w-sm mt-2">
-      Estamos aquí para ayudarte. Cuéntanos en qué podemos colaborar contigo.
+        We’re here to help. Tell us how we can collaborate with you.
       </p>
 
       <form name="feedback" className="my-8" onSubmit={handleFormSubmit}>
         <input type="hidden" name="form-name" value="feedback" />
         <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
           <LabelInputContainer>
-            <Label htmlFor="name">Nombre <span className="text-[#FF0000] text-xl">*</span></Label>
+            <Label htmlFor="name">Name <span className="text-[#FF0000] text-xl">*</span></Label>
             <Input name="name" placeholder="Nombre Completo" type="text" required />
           </LabelInputContainer>
         </div>
         <LabelInputContainer className="mb-4">
-          <Label htmlFor="email">Correo Electrónico <span className="text-[#FF0000] text-xl">*</span></Label>
+          <Label htmlFor="email">E-mail <span className="text-[#FF0000] text-xl">*</span></Label>
           <Input name="email" placeholder="projectmayhem@fc.com" type="email" required />
         </LabelInputContainer>
         <LabelInputContainer className="mb-4">
-          <Label htmlFor="phone">Teléfono</Label>
+          <Label htmlFor="phone">Phone</Label>
           <Input name="phone" placeholder="Telefono" type="tel" />
         </LabelInputContainer>
         <LabelInputContainer className="mb-4">
-          <Label htmlFor="message">Mensaje</Label>
+          <Label htmlFor="message">Message</Label>
           <textarea name="message" placeholder="Mensaje" rows={4} cols={40} />
         </LabelInputContainer>
 
