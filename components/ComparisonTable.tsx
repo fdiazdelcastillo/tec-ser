@@ -1,21 +1,21 @@
 import Image from "next/image";
 
-export type PrecioProps = { mensual: number; anual: number };
+export type PriceProps = { month: number; year: number };
 
-const Precio: Component<PrecioProps> = (props) => {
+const Price: Component<PriceProps> = (props) => {
   return (
     <div className="flex flex-col items-start">
       <div>
         us${" "}
-        <span className="font-bold md:text-xl max-sm:text-base font-mont">
-          {props.mensual}
+        <span className="font-bold lg:text-2xl md:text-xl max-sm:text-lg font-mont">
+          {props.month}
         </span>
-        mes <br />
+        month <br />
         us${" "}
-        <span className="font-bold md:text-xl max-sm:text-base font-mont">
-          {props.anual}
+        <span className="font-bold lg:text-2xl md:text-xl max-sm:text-lg font-mont">
+          {props.year}
         </span>
-        mes/año
+        m/year
       </div>
     </div>
   );
@@ -23,22 +23,22 @@ const Precio: Component<PrecioProps> = (props) => {
 
 type ComparisonTableCardProps = {
   title: string;
-  precio: PrecioProps[];
-  paginasIncluidas: string;
-  despliegue: string;
-  refrescoUi: string;
-  iaChat: string;
+  price: PriceProps[];
+  includedPages: string;
+  deployment: string;
+  uiRefresh: string;
+  aiChat: string;
 };
 
 const ComparisonTableCard: Component<ComparisonTableCardProps> = (props) => {
-  let precioItems: React.ReactNode[] = [];
+  let priceItems: React.ReactNode[] = [];
 
-  for (let iterator = 0; iterator < props.precio.length; iterator++) {
-    const precio = props.precio[iterator];
+  for (let iterator = 0; iterator < props.price.length; iterator++) {
+    const price = props.price[iterator];
 
-    precioItems = [
-      ...precioItems,
-      <Precio key={iterator} mensual={precio.mensual} anual={precio.anual} />,
+    priceItems = [
+      ...priceItems,
+      <Price key={iterator} month={price.month} year={price.year} />,
     ];
   }
 
@@ -56,15 +56,15 @@ const ComparisonTableCard: Component<ComparisonTableCardProps> = (props) => {
           {props.title}
         </div>
       </div>
-      <div>{precioItems}</div>
+      <div className="h-[104px]">{priceItems}</div>
       <button className="py-[5px] px-2 bg-primary rounded-[50px] font-semibold text-[12px] text-center border-solid border-elements border-[4px] my-6">
-        Contáctanos
+        Contact Us
       </button>
-      <div>{props.paginasIncluidas}</div>
-      <div>{props.despliegue}</div>
-      <div>{props.refrescoUi}</div>
-      {props.iaChat ? (
-        <Image src={props.iaChat} alt="" width={24} height={24} />
+      <div>{props.includedPages}</div>
+      <div>{props.deployment}</div>
+      <div>{props.uiRefresh}</div>
+      {props.aiChat ? (
+        <Image src={props.aiChat} alt="" width={24} height={24} />
       ) : (
         <div className="w-6 h-6 bg-transparent"></div>
       )}
@@ -89,11 +89,11 @@ const ComparisonTable: Component<ComparisonTableProps> = (props) => {
       <ComparisonTableCard
         key={iterator}
         title={card.title}
-        precio={card.precio}
-        paginasIncluidas={card.paginasIncluidas}
-        despliegue={card.despliegue}
-        refrescoUi={card.refrescoUi}
-        iaChat={card.iaChat}
+        price={card.price}
+        includedPages={card.includedPages}
+        deployment={card.deployment}
+        uiRefresh={card.uiRefresh}
+        aiChat={card.aiChat}
       />,
     ];
   }
@@ -111,13 +111,13 @@ const ComparisonTable: Component<ComparisonTableProps> = (props) => {
         <div className="h-12 mb-8 text-center lg:text-xl md:text-lg max-sm:text-base text-primary font-bold ">
           Características
         </div>
-        <div className="lg:mb-[142px] md:mb-[128px] max-sm:mb-[102px] lg:text-2xl md:text-xl max-sm:text-lg">
-          Precio
+        <div className="lg:mb-[190px] md:mb-[176px] max-sm:mb-[175px] lg:text-2xl md:text-xl max-sm:text-lg">
+          Price
         </div>
-        <div>Páginas incluidas</div>
-        <div>Despliegue</div>
-        <div>Refresco UI</div>
-        <div>IA Chat</div>
+        <div>Included Pages</div>
+        <div>Deployment</div>
+        <div>UI Refresh</div>
+        <div>AI Chat</div>
       </div>
       <div className="flex flex-row flex-grow w-[100%]">{cardItems}</div>
     </div>

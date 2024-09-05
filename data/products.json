@@ -1,50 +1,50 @@
 [
   {
-    "title": "Sitio Web",
-    "precio": [{ "mensual": 200, "anual": 160 }],
-    "paginasIncluidas": "3",
-    "despliegue": "1 TB/mes",
-    "refrescoUi": "Anual",
-    "iaChat": "/Check.svg"
+    "title": "Website",
+    "price": [{ "month": 200, "year": 160 }],
+    "includedPages": "3",
+    "deployment": "1 TB/month",
+    "uiRefresh": "year",
+    "aiChat": "/Check.svg"
   },
   {
-    "title": "Catálogo Web",
-    "precio": [{ "mensual": 400, "anual": 320 }],
-    "paginasIncluidas": "6",
-    "despliegue": "1 TB/mes",
-    "refrescoUi": "Cada 2 años",
-    "iaChat": "/Check.svg"
+    "title": "Web Catalog",
+    "price": [{ "month": 400, "year": 320 }],
+    "includedPages": "6",
+    "deployment": "1 TB/month",
+    "uiRefresh": "Every 2 years",
+    "aiChat": "/Check.svg"
   },
   {
-    "title": "Tienda Web",
-    "precio": [{ "mensual": 600, "anual": 480 }],
-    "paginasIncluidas": "11",
-    "despliegue": "1 TB/mes",
-    "refrescoUi": "Cada 2 años",
-    "iaChat": "/Check.svg"
+    "title": "Web Store",
+    "price": [{ "month": 600, "year": 480 }],
+    "includedPages": "11",
+    "deployment": "1 TB/month",
+    "uiRefresh": "Every 2 years",
+    "aiChat": "/Check.svg"
   },
   {
-    "title": "Tienda Movil",
-    "precio": [{ "mensual": 1000, "anual": 800 }],
-    "paginasIncluidas": "8",
-    "despliegue": "1 TB/mes",
-    "refrescoUi": "Cada 2 años",
-    "iaChat": "/Check.svg"
+    "title": "Mobile Store",
+    "price": [{ "month": 1000, "year": 800 }],
+    "includedPages": "8",
+    "deployment": "1 TB/month",
+    "uiRefresh": "Every 2 years",
+    "aiChat": "/Check.svg"
   },
   {
-    "title": "Tienda Web y Movil",
-    "precio": [{ "mensual": 1400, "anual": 800 }],
-    "paginasIncluidas": "12",
-    "despliegue": "1 TB/mes",
-    "refrescoUi": "Anual",
-    "iaChat": "/Check.svg"
+    "title": "Mobile & Web Store",
+    "price": [{ "month": 1400, "year": 800 }],
+    "includedPages": "12",
+    "deployment": "1 TB/month",
+    "uiRefresh": "year",
+    "aiChat": "/Check.svg"
   },
   {
     "title": "IA Chat",
-    "precio": [{ "mensual": 100, "anual": 80 }],
-    "paginasIncluidas": "N/A",
-    "despliegue": "N/A",
-    "refrescoUi": "N/A",
-    "iaChat": ""
+    "price": [{ "month": 100, "year": 80 }],
+    "includedPages": "N/A",
+    "deployment": "N/A",
+    "uiRefresh": "N/A",
+    "aiChat": ""
   }
 ]
