@@ -7,12 +7,12 @@ const Price: Component<PriceProps> = (props) => {
     <div className="flex flex-col items-start">
       <div>
         us${" "}
-        <span className="font-bold lg:text-2xl md:text-xl max-sm:text-lg font-mont">
+        <span className="font-bold lg:text-xl md:text-lg max-sm:text-base font-mont">
           {props.month}
         </span>
         month <br />
         us${" "}
-        <span className="font-bold lg:text-2xl md:text-xl max-sm:text-lg font-mont">
+        <span className="font-bold lg:text-xl md:text-lg max-sm:text-base font-mont">
           {props.year}
         </span>
         m/year
@@ -43,7 +43,7 @@ const ComparisonTableCard: Component<ComparisonTableCardProps> = (props) => {
   }
 
   return (
-    <div className="flex flex-shrink-0 flex-col py-14 md:px-6 max-sm:px-3 lg:gap-7 md:gap-4 max-sm:gap-3 text-text items-center font-mont font-semibold lg:text-base max-md:text-sm border-l-2 border-background relative xl:w-1/6 lg:w-[20.7%] md:w-[23.2%] max-sm:w-1/2 ">
+    <div className="flex flex-shrink-0 flex-col py-14 md:px-6 max-sm:px-3 lg:gap-7 md:gap-4 max-sm:gap-3 text-text items-center font-mont font-semibold lg:text-base max-md:text-sm border-l-2 border-background relative xl:w-1/6 lg:w-[21.3%] md:w-[23.4%] max-sm:w-1/2 ">
       <div
         style={{
           backgroundImage: "url(/noise.webp)",
