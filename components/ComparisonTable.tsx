@@ -63,7 +63,11 @@ const ComparisonTableCard: Component<ComparisonTableCardProps> = (props) => {
       <div>{props.paginasIncluidas}</div>
       <div>{props.despliegue}</div>
       <div>{props.refrescoUi}</div>
-      <Image src={props.iaChat} alt="" width={24} height={24} />
+      {props.iaChat ? (
+        <Image src={props.iaChat} alt="" width={24} height={24} />
+      ) : (
+        <div className="w-6 h-6 bg-transparent"></div>
+      )}
     </div>
   );
 };
@@ -77,6 +81,8 @@ const ComparisonTable: Component<ComparisonTableProps> = (props) => {
 
   for (let iterator = 0; iterator < props.card.length; iterator++) {
     const card = props.card[iterator];
+
+    console.log(card);
 
     cardItems = [
       ...cardItems,

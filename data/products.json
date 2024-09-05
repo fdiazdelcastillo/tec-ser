@@ -5,7 +5,7 @@
     "paginasIncluidas": "3",
     "despliegue": "1 TB/mes",
     "refrescoUi": "Anual",
-    "iaChat": "@/public/Check.svg"
+    "iaChat": "/Check.svg"
   },
   {
     "title": "Catálogo Web",
@@ -13,7 +13,7 @@
     "paginasIncluidas": "6",
     "despliegue": "1 TB/mes",
     "refrescoUi": "Cada 2 años",
-    "iaChat": "@/public/Check.svg"
+    "iaChat": "/Check.svg"
   },
   {
     "title": "Tienda Web",
@@ -21,7 +21,7 @@
     "paginasIncluidas": "11",
     "despliegue": "1 TB/mes",
     "refrescoUi": "Cada 2 años",
-    "iaChat": "@/public/Check.svg"
+    "iaChat": "/Check.svg"
   },
   {
     "title": "Tienda Movil",
@@ -29,7 +29,7 @@
     "paginasIncluidas": "8",
     "despliegue": "1 TB/mes",
     "refrescoUi": "Cada 2 años",
-    "iaChat": "@/public/Check.svg"
+    "iaChat": "/Check.svg"
   },
   {
     "title": "Tienda Web y Movil",
@@ -37,7 +37,7 @@
     "paginasIncluidas": "12",
     "despliegue": "1 TB/mes",
     "refrescoUi": "Anual",
-    "iaChat": "@/public/Check.svg"
+    "iaChat": "/Check.svg"
   },
   {
     "title": "IA Chat",
