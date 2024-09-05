@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Sitio Web",
+    "precio": [{ "mensual": 200, "anual": 160 }],
+    "paginasIncluidas": "3",
+    "despliegue": "1 TB/mes",
+    "refrescoUi": "Anual",
+    "iaChat": "@/public/Check.svg"
+  },
+  {
+    "title": "Catálogo Web",
+    "precio": [{ "mensual": 400, "anual": 320 }],
+    "paginasIncluidas": "6",
+    "despliegue": "1 TB/mes",
+    "refrescoUi": "Cada 2 años",
+    "iaChat": "@/public/Check.svg"
+  },
+  {
+    "title": "Tienda Web",
+    "precio": [{ "mensual": 600, "anual": 480 }],
+    "paginasIncluidas": "11",
+    "despliegue": "1 TB/mes",
+    "refrescoUi": "Cada 2 años",
+    "iaChat": "@/public/Check.svg"
+  },
+  {
+    "title": "Tienda Movil",
+    "precio": [{ "mensual": 1000, "anual": 800 }],
+    "paginasIncluidas": "8",
+    "despliegue": "1 TB/mes",
+    "refrescoUi": "Cada 2 años",
+    "iaChat": "@/public/Check.svg"
+  },
+  {
+    "title": "Tienda Web y Movil",
+    "precio": [{ "mensual": 1400, "anual": 800 }],
+    "paginasIncluidas": "12",
+    "despliegue": "1 TB/mes",
+    "refrescoUi": "Anual",
+    "iaChat": "@/public/Check.svg"
+  },
+  {
+    "title": "IA Chat",
+    "precio": [{ "mensual": 100, "anual": 80 }],
+    "paginasIncluidas": "N/A",
+    "despliegue": "N/A",
+    "refrescoUi": "N/A",
+    "iaChat": ""
+  }
+]

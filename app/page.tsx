@@ -8,7 +8,8 @@ import { Testimonials } from "@/components/Testimonials";
 import { Faq } from "@/components/Faq";
 import { ContactInfo } from "@/components/ContactInfo";
 import Footer from "@/components/Footer";
-import ComparisonSection from "@/components/ComparisonTableSection";
+import products from "@/data/products.json";
+import ComparisonTable from "@/components/ComparisonTable";
 
 export default function Home() {
   return (
@@ -19,7 +20,7 @@ export default function Home() {
       <Hero />
       <Features />
       <Services />
-      <ComparisonSection />
+      <ComparisonTable card={products} />
       <Faq />
       <Testimonials />
       <ContactInfo />
