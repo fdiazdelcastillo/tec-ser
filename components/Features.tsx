@@ -18,7 +18,8 @@ export function Features() {
             Always Fresh Design
           </h2>
           <p className="mt-4 text-left  text-base/6 text-text font-pop font-light">
-            Say goodbye to outdated pages. We update your design periodically to keep your brand always attractive and modern.
+            Say goodbye to outdated pages. We update your design periodically to
+            keep your brand always attractive and modern.
           </p>
         </div>
       </WobbleCard>
@@ -27,7 +28,8 @@ export function Features() {
           Scalable Growth
         </h2>
         <p className="mt-4 max-w-[26rem] text-left text-base/6 text-neutral-200 text-text font-pop font-light">
-          Start with the basics and expand your services as your business grows, without hassles or painful migrations.
+          Start with the basics and expand your services as your business grows,
+          without hassles or painful migrations.
         </p>
         <Image
           src="/scalable-growth.png"
@@ -43,7 +45,8 @@ export function Features() {
             Custom Solutions
           </h2>
           <p className="mt-4 max-w-[26rem] text-left text-base/6 text-neutral-200 text-text font-pop font-light">
-            From a simple landing page to a complete store, we have the perfect package for your business and budget.
+            From a simple landing page to a complete store, we have the perfect
+            package for your business and budget.
           </p>
         </div>
       </WobbleCard>
@@ -53,7 +56,8 @@ export function Features() {
             Multiplatform Presence
           </h2>
           <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200 text-text font-pop font-light">
-            Conquer both web and mobile with our integrated solutions, reaching your customers wherever they are.
+            Conquer both web and mobile with our integrated solutions, reaching
+            your customers wherever they are.
           </p>
         </div>
       </WobbleCard>
@@ -63,7 +67,7 @@ export function Features() {
             AI Power at Your Service
           </h2>
           <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200 text-text font-pop font-light">
-            Our integrated AI chat responds to inquiries 24/7, improving your customers' experience and freeing up your time.
+            {`Our integrated AI chat responds to inquiries 24/7, improving your customers' experience and freeing up your time.`}
           </p>
         </div>
       </WobbleCard>
@@ -76,7 +80,8 @@ export function Features() {
             Comprehensive Support
           </h2>
           <p className="mt-4 text-left  text-base/6 text-text font-pop font-light">
-            From design to maintenance, we take care of everything. You only need to focus on growing your business.
+            From design to maintenance, we take care of everything. You only
+            need to focus on growing your business.
           </p>
         </div>
         <Image
@@ -92,7 +97,8 @@ export function Features() {
           Worry-Free Deployment
         </h2>
         <p className="mt-4 max-w-[26rem] text-left text-base/6 text-neutral-200 text-text font-pop font-light">
-          With 1 TB of monthly deployment included, your site will always be available to your customers, without surprise costs.
+          With 1 TB of monthly deployment included, your site will always be
+          available to your customers, without surprise costs.
         </p>
       </WobbleCard>
     </section>
