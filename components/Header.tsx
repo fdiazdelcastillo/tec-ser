@@ -70,18 +70,18 @@ const Header: React.FC = () => {
     <header
       ref={headerRef}
       id="header"
-      className={`w-screen flex flex-col md:flex-row md:justify-start items-center gap-4 px-3 py-5 bg-white bg-opacity-50 transition-transform duration-300 ease-in-out ${
+      className={`w-full flex flex-col md:flex-row md:justify-start items-center gap-4 px-3 py-5 bg-white bg-opacity-50 transition-transform duration-300 ease-in-out ${
         isSticky
           ? scrollDirection === "up"
-            ? "flex-col backdrop-blur-[10px] fixed items-start top-0 left-1 md:left-[var(--padding-x)] md:px-3 right-0 z-50 transform translate-y-0"
-            : "flex-col backdrop-blur-[10px] fixed items-start top-0 left-1 md:left-[var(--padding-x)] md:px-3 right-0 z-50 transform -translate-y-full"
+            ? "w-auto flex-col md:flex-row md:justify-start backdrop-blur-[10px] fixed items-start top-0 left-1 md:left-[var(--padding-x)] md:px-3 right-0 md:right-[var(--padding-x)] z-50 transform translate-y-0"
+            : "w-auto flex-col md:flex-row md:justify-start backdrop-blur-[10px] fixed items-start top-0 left-1 md:left-[var(--padding-x)] md:px-3 right-0 md:right-[var(--padding-x)] z-50 transform -translate-y-full"
           : ""
       }`}
     >
       {/* Backdrop layer over the nav container */}
       {/* <div className="backdrop-blur-[20px] absolute inset-0 bg-white bg-opacity-50 z-40"></div> */}
       {/* <div className="bg-white bg-opacity-0 backdrop-blur-[20px] absolute inset-0 z-40"></div> */}
-      <div className="w-screen md:w-auto flex justify-end-">
+      <div className="w-full md:w-auto flex justify-end">
         <div className="z-50 relative">
           <Link href="#home">
             <Image src={Logo} alt="omnitrek logo" width={180} />
