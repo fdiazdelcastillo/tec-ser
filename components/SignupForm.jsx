@@ -66,10 +66,10 @@ export function SignupForm() {
           Enviar &rarr;
           <BottomGradient />
         </button>
-        <div id="success" style={{display:"none;"}}>
+        <div id="success" style={{display:"none"}}>
           <p>Your message was sent successfully!</p>
         </div>
-        <div id="error" style={{display:"none;"}}>
+        <div id="error" style={{display:"none"}}>
           <p>There was an error sending your message. Please try again.</p>
         </div>
       </form>

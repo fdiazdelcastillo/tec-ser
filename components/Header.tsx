@@ -70,40 +70,39 @@ const Header: React.FC = () => {
     <header
       ref={headerRef}
       id="header"
-      className={`w-screen flex items-center gap-4 px-3 py-5 bg-white bg-opacity-50 transition-transform duration-300 ease-in-out ${
+      className={`w-screen flex flex-col md:flex-row md:justify-start items-center gap-4 px-3 py-5 bg-white bg-opacity-50 transition-transform duration-300 ease-in-out ${
         isSticky
           ? scrollDirection === "up"
-            ? "fixed top-0 left-1 md:left-[var(--padding-x)] md:px-3 right-0 z-50 transform translate-y-0"
-            : "fixed top-0 left-1 md:left-[var(--padding-x)] md:px-3 right-0 z-50 transform -translate-y-full"
+            ? "flex-col backdrop-blur-[10px] fixed items-start top-0 left-1 md:left-[var(--padding-x)] md:px-3 right-0 z-50 transform translate-y-0"
+            : "flex-col backdrop-blur-[10px] fixed items-start top-0 left-1 md:left-[var(--padding-x)] md:px-3 right-0 z-50 transform -translate-y-full"
           : ""
       }`}
-      style={{
-        backdropFilter: "blur(10px)",
-        WebkitBackdropFilter: "blur(10px)", // For older WebKit browsers
-      }}
     >
-      <div className="z-45">
-        <Link href="#home">
-          <Image src={Logo} alt="omnitrek logo" width={180} />
-        </Link>
+      {/* Backdrop layer over the nav container */}
+      {/* <div className="backdrop-blur-[20px] absolute inset-0 bg-white bg-opacity-50 z-40"></div> */}
+      {/* <div className="bg-white bg-opacity-0 backdrop-blur-[20px] absolute inset-0 z-40"></div> */}
+      <div className="w-screen md:w-auto flex justify-end-">
+        <div className="z-50 relative">
+          <Link href="#home">
+            <Image src={Logo} alt="omnitrek logo" width={180} />
+          </Link>
+        </div>
+
+        <div className="md:hidden bg-transparent w-full flex justify-end z-50 relative">
+          <button onClick={toggleMenu} aria-label="Toggle menu">
+            {menuOpen ? (
+              <AiOutlineClose size={20} color="#E6E8EA" />
+            ) : (
+              <AiOutlineMenu size={20} color="#E6E8EA" />
+            )}
+          </button>
+        </div>
       </div>
-      <div className="block md:hidden bg-transparent w-full flex justify-end z-50">
-        <button onClick={toggleMenu} aria-label="Toggle menu">
-          {menuOpen ? (
-            <AiOutlineClose size={20} color="#E6E8EA" />
-          ) : (
-            <AiOutlineMenu size={20} color="#E6E8EA" />
-          )}
-        </button>
-      </div>
+
       <nav
         className={`${
           menuOpen ? "block" : "hidden"
-        } absolute top-[70px] md:top-0 left-0 right-0 b p-4 z-40 shadow-lg md:shadow-none md:relative lg:flex md:items-center md:gap-4 md:p-0 transition-all`}
-        style={{
-          backdropFilter: "blur(10px)",
-          WebkitBackdropFilter: "blur(10px)", // For older WebKit browsers
-        }}
+        } w-screen p-4 z-40 shadow-lg md:shadow-none md:relative lg:flex md:items-center md:gap-4 md:p-0 transition-all`}
       >
         {navbarData.map((navbarLink, index) => (
           <Link
