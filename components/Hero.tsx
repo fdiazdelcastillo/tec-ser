@@ -399,7 +399,7 @@ export const Hero = () => {
       id="home"
       className="flex flex-col items-center xl:mx-60 lg:mx-20 md:mx-8 "
     >
-      <div className="flex flex-col items-center mx-auto w-full relative overflow-hidden h-full xl:h-[53rem] lg:h-[46rem] md:h-[47rem] max-sm:h-[41rem] px-4">
+      <div className="flex flex-col items-center mx-auto w-full relative overflow-hidden h-full xl:h-[53rem] lg:h-[46rem] md:h-[47rem] max-sm:h-[40rem] px-4">
         <motion.div
           initial={{
             opacity: 0,
@@ -415,16 +415,15 @@ export const Hero = () => {
           className="div flex items-center flex-col gap-8"
         >
           <h1 className=" text-center text-text xl:text-3xl md:text-2xl max-sm:text-xl ">
-            Impulsa tu Negocio en la Era Digital Soluciones Web y Móviles a tu
-            Medida
+            Boost Your Business in the Digital Age: Customized Web and Mobile
+            Solutions
           </h1>
-          <p className="text-center xl:text-xl md:text-base max-sm:text-[15px] font-normal text-neutral-700 text-text">
-            Desde landing pages impactantes hasta tiendas en línea completas,
-            tenemos la solución perfecta para potenciar tu marca en el mundo
-            digital. Con inteligencia artificial integrada y diseños frescos, te
-            ayudamos a conquistar a tus clientes en cada clic. ¿Listo para dar
-            el salto? Descubre nuestros paquetes y transforma tu presencia
-            online hoy
+          <p className="text-center xl:text-xl md:text-base max-sm:text-sm font-normal text-neutral-700 text-text">
+            From impactful landing pages to complete online stores, we have the
+            perfect solution to enhance your brand in the digital world. With
+            integrated artificial intelligence and fresh designs, we help you
+            win over your customers with every click. Ready to take the leap?
+            Discover our packages and transform your online presence today.
           </p>
         </motion.div>
         <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-black to-white z-40" />
