@@ -109,7 +109,7 @@ const ComparisonTable: Component<ComparisonTableProps> = (props) => {
           className="absolute object-contain inset-0 w-full h-full  scale-y-100 transform opacity-[0.019]"
         ></div>
         <div className="h-12 mb-8 text-center lg:text-xl md:text-lg max-sm:text-base text-primary font-bold ">
-          Características
+          Features
         </div>
         <div className="lg:mb-[190px] md:mb-[176px] max-sm:mb-[175px] lg:text-2xl md:text-xl max-sm:text-lg">
           Price
