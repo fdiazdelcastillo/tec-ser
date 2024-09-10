@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Website",
+    "price": [{ "month": 200, "year": 160 }],
+    "includedPages": "3",
+    "deployment": "1 TB/month",
+    "uiRefresh": "year",
+    "aiChat": "/Check.svg"
+  },
+  {
+    "title": "Web Catalog",
+    "price": [{ "month": 400, "year": 320 }],
+    "includedPages": "6",
+    "deployment": "1 TB/month",
+    "uiRefresh": "Every 2 years",
+    "aiChat": "/Check.svg"
+  },
+  {
+    "title": "Web Store",
+    "price": [{ "month": 600, "year": 480 }],
+    "includedPages": "11",
+    "deployment": "1 TB/month",
+    "uiRefresh": "Every 2 years",
+    "aiChat": "/Check.svg"
+  },
+  {
+    "title": "Mobile Store",
+    "price": [{ "month": 1000, "year": 800 }],
+    "includedPages": "8",
+    "deployment": "1 TB/month",
+    "uiRefresh": "Every 2 years",
+    "aiChat": "/Check.svg"
+  },
+  {
+    "title": "Mobile & Web Store",
+    "price": [{ "month": 1400, "year": 800 }],
+    "includedPages": "12",
+    "deployment": "1 TB/month",
+    "uiRefresh": "year",
+    "aiChat": "/Check.svg"
+  },
+  {
+    "title": "IA Chat",
+    "price": [{ "month": 100, "year": 80 }],
+    "includedPages": "N/A",
+    "deployment": "N/A",
+    "uiRefresh": "N/A",
+    "aiChat": ""
+  }
+]
