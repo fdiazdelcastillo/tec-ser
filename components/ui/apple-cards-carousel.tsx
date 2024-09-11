@@ -262,7 +262,7 @@ export const Card = ({
         // onClick={handleOpen}
         className="rounded-3xl bg-gray-100 dark:bg-neutral-900 h-80 w-56 md:h-[40rem] md:w-96 overflow-hidden flex flex-col items-start justify-start relative z-10"
       >
-        <div className="absolute h-full top-0 inset-x-0 bg-gradient-to-b from-[#000000]/70 via-transparent to-transparent z-30 pointer-events-none" />
+        <div className="absolute h-full top-0 inset-x-0 bg-gradient-to-b from-[#000000]/80 via-transparent to-transparent z-30 pointer-events-none" />
         <div className="w-full backdrop-blur-[1px] relative z-40 p-8">
           <motion.p
             layoutId={layout ? `category-${card.category}` : undefined}
