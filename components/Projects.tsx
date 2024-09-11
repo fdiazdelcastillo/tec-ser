@@ -63,6 +63,7 @@ const data = [
     title: "FunThriving.",
     country: "United States",
     src: FunThriving.src,
+    href: "https://funthriving.webflow.io/",
     content: <DummyContent />,
   },
   {
@@ -70,6 +71,7 @@ const data = [
     title: "Tagnetize.",
     country: "Colombia",
     src: Tagnetize.src,
+    href: "https://tagnetize.app/",
     content: <DummyContent />,
   },
   {
@@ -77,6 +79,7 @@ const data = [
     title: "Facility360.",
     country: "Colombia",
     src: Facility360.src,
+    href: "https://facility360.co/",
     content: <DummyContent />,
   },
 
@@ -85,6 +88,7 @@ const data = [
     title: "Del Toro Dotaciones.",
     country: "Colombia",
     src: DelToro.src,
+    href: "https://deltorodotaciones.com/",
     content: <DummyContent />,
   },
   {
@@ -92,6 +96,7 @@ const data = [
     title: "Merco International.",
     country: "United States",
     src: Merco.src,
+    href: "https://mercointernational.com/",
     content: <DummyContent />,
   },
   {
@@ -99,6 +104,7 @@ const data = [
     title: "Virtualmedia Network.",
     country: "Colombia",
     src: VMN.src,
+    href: "https://virtualmedianet.com/",
     content: <DummyContent />,
   },
   {
@@ -106,6 +112,7 @@ const data = [
     title: "MG Cia.",
     country: "Colombia",
     src: MGCia.src,
+    href: "https://mgcya.com/",
     content: <DummyContent />,
   },
 ];
