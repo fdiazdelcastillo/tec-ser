@@ -5,8 +5,8 @@ export const navbarData: NavbarData = [
   { name: "Features", link: "#features" },
   { name: "Services", link: "#services" },
   { name: "FAQ", link: "#faq" },
-  { name: "Skills", link: "#skills" },
   { name: "Projects", link: "#projects" },
+  { name: "Skills", link: "#skills" },
   { name: "Contact Us", link: "#contactUs" },
 ];
 

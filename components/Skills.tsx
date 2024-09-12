@@ -26,7 +26,7 @@ const skills: Skill[] = [
   { name: "StoryBook", logo: StoryBookIcon.src },
 ];
 
-export default function SkillsCarousel() {
+export default function Skills() {
   return (
     <section
       id="skills"
