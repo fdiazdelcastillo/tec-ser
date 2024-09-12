@@ -11,6 +11,7 @@ import Footer from "@/components/Footer";
 import products from "@/data/products.json";
 import ComparisonTable from "@/components/ComparisonTable";
 import { Projects } from "@/components/Projects";
+import SkillsCarousel from "@/components/SkillsCarousel";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       <Services />
       <ComparisonTable card={products} />
       <Faq />
+      <SkillsCarousel />
       <Projects />
       <ContactInfo />
       <Footer />
