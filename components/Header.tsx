@@ -102,7 +102,7 @@ const Header: React.FC = () => {
       <nav
         className={`${
           menuOpen ? "block" : "hidden"
-        } w-screen p-4 z-40 shadow-lg md:shadow-none md:relative lg:flex md:items-center md:gap-4 md:p-0 transition-all`}
+        } w-full p-4 z-40 shadow-lg md:shadow-none md:relative lg:flex md:items-center md:gap-4 md:p-0 transition-all`}
       >
         {navbarData.map((navbarLink, index) => (
           <Link

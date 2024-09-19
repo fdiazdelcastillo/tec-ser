@@ -28,13 +28,11 @@ body {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(
-      -33.33%
-    ); /* Solo movemos una parte de los elementos */
+    transform: translateX(-100%);
   }
 }
 
 .animate-marquee {
   display: flex;
-  animation: marquee 60s linear infinite;
+  animation: marquee 90s linear infinite; /* Animación más lenta y sin saltos */
 }
