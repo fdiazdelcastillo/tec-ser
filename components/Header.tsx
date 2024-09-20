@@ -70,12 +70,15 @@ const Header: React.FC = () => {
     <header
       ref={headerRef}
       id="header"
-      className={`w-full flex flex-col md:flex-row md:justify-start items-center gap-4 px-3 py-5 bg-white bg-opacity-50 transition-transform duration-300 ease-in-out ${
+      className={`w-full flex flex-col md:flex-row gap-4 z-50 px-3 py-5 ${
+        // className={`w-full md:w-auto flex flex-col md:flex-row md:justify-start items-center gap-4 px-3 py-5 bg-white bg-opacity-50 transition-transform duration-300 ease-in-out ${
         isSticky
           ? scrollDirection === "up"
-            ? "w-auto flex-col md:flex-row md:justify-start backdrop-blur-[10px] fixed items-start top-0 left-1 md:left-[var(--padding-x)] md:px-3 right-0 md:right-[var(--padding-x)] z-50 transform translate-y-0"
-            : "w-auto flex-col md:flex-row md:justify-start backdrop-blur-[10px] fixed items-start top-0 left-1 md:left-[var(--padding-x)] md:px-3 right-0 md:right-[var(--padding-x)] z-50 transform -translate-y-full"
-          : ""
+            ? "fixed backdrop-blur-[10px]"
+            : "fixed backdrop-blur-[10px]"
+          : // ? "w-auto flex-col md:flex-row md:justify-start backdrop-blur-[10px] fixed items-start top-0 left-1 md:left-[var(--padding-x)] md:px-3 right-1 md:right-[var(--padding-x)] z-50 transform translate-y-0"
+            // : "w-auto flex-col md:flex-row md:justify-start backdrop-blur-[10px] fixed items-start top-0 left-1 md:left-[var(--padding-x)] md:px-3 right-1 md:right-[var(--padding-x)] z-50 transform -translate-y-full"
+            ""
       }`}
     >
       {/* Backdrop layer over the nav container */}
