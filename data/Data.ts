@@ -6,7 +6,7 @@ export const navbarData: NavbarData = [
   { name: "Services", link: "#services" },
   { name: "FAQ", link: "#faq" },
   { name: "Projects", link: "#projects" },
-  { name: "Skills", link: "#skills" },
+  { name: "Stack", link: "#stack" },
   { name: "Contact Us", link: "#contactUs" },
 ];
 

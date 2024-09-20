@@ -74,8 +74,8 @@ const Header: React.FC = () => {
         // className={`w-full md:w-auto flex flex-col md:flex-row md:justify-start items-center gap-4 px-3 py-5 bg-white bg-opacity-50 transition-transform duration-300 ease-in-out ${
         isSticky
           ? scrollDirection === "up"
-            ? "fixed backdrop-blur-[10px]"
-            : "fixed backdrop-blur-[10px]"
+            ? "fixed backdrop-blur-[10px] transform translate-y-0"
+            : "fixed backdrop-blur-[10px] transform -translate-y-full"
           : // ? "w-auto flex-col md:flex-row md:justify-start backdrop-blur-[10px] fixed items-start top-0 left-1 md:left-[var(--padding-x)] md:px-3 right-1 md:right-[var(--padding-x)] z-50 transform translate-y-0"
             // : "w-auto flex-col md:flex-row md:justify-start backdrop-blur-[10px] fixed items-start top-0 left-1 md:left-[var(--padding-x)] md:px-3 right-1 md:right-[var(--padding-x)] z-50 transform -translate-y-full"
             ""

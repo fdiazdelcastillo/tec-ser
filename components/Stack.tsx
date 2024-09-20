@@ -36,14 +36,17 @@ const skills: Skill[] = [
 
 export default function Stack() {
   return (
-    <div className="relative w-full h-full overflow-hidden py-10">
+    <section
+      id="stack"
+      className="relative w-full h-full overflow-hidden py-10"
+    >
       {/* Contenedor del carrusel con la animación */}
       <div className="flex w-max animate-marquee">
         {/* Duplicamos varias veces para asegurar que haya suficiente contenido */}
         {[...skills, ...skills, ...skills].map((skill, index) => (
           <div
             key={index}
-            className="flex-shrink-0 w-64 flex flex-col items-center text-center mx-5"
+            className="flex-shrink-0 w-64 flex flex-col items-center text-center mx-3"
           >
             <div className="bg-text rounded-full p-4 shadow-lg">
               <img src={skill.logo} alt={skill.name} className="h-16 w-16" />
@@ -54,6 +57,6 @@ export default function Stack() {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
